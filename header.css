@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: grid;
+    grid-template: 1fr / 30% 1fr 30%;
+    height: 4rem;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: left;
+    align-self: center;
+    margin-left: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+/* List of Menus */
+nav {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+    align-self: center;
+    transition: opacity 0.2s ease-in;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 1rem;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    position: relative;
+    text-underline-offset: 0.7rem;
+}
+
+nav li:hover {
+    text-decoration: underline 0.1rem solid black;
+}
+
+/* SearchBar, Cart and Account Icons */
+.nav-buttons {
+    display: flex;
+    grid-area: 1 / 3 / 2 / 4;
+    justify-content: right;
+    align-items: center;
+    margin-right: 3rem;
+    font-size: 1.2rem;
+    transition: opacity 0.2s ease-in;
+}
+
+.search-bar {
+    transition: width 0.2s ease-in, transform 0.15s ease-in;
+    width: 10rem;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 6.5rem;
+    margin: 0 0.5rem;
+    height: 1.5rem;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    transition: width 0.2s ease-in;
+}
+
+.search-bar i {
+    border-radius: 50%;
+}
+
+.cart {
+    margin: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s ease-in;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.15s ease-in;
+}
+
+.account i,
+.cart i {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.account i:hover,
+.cart i:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.account i:active,
+.cart i:active {
+    background-color: rgb(230, 230, 230);
+}
+
+/* Cross when search is clicked */
+.close-search {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    align-self: center;
+    justify-self: center;
+    transition: opacity 0.15s ease-in;
+}
+
+.close-search i {
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.close-search i:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.close-search i:active {
+    background-color: rgb(230, 230, 230);
+}
+
+/* Search Window Animate */
+.search-window {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    transform: translateY(-150%);
+    overflow: hidden;
+    transition: transform 0.4s ease-in;
+}
+
+/* Cart Window Animate */
+.cart-window {
+    width: 30%;
+    height: 20rem;
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    right: 0;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform 0.4s ease-in;
+}
+
+.cart-open {
+    transform: translateX(0%);
+}
+
+/* Account Window Animate */
+.account-window {
+    width: 30%;
+    height: 20rem;
+    position: absolute;
+    z-index: 3;
+    background-color: purple;
+    right: 0;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform 0.4s ease-in;
+}
+
+.account-open {
+    transform: translateX(0%);
+}
+
+.hero {
+    height: 80vh;
+    background-color: skyblue;
+}
