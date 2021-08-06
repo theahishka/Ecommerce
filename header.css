@@ -11,7 +11,17 @@ html {
 
 body {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.free-shipping {
+    height: 3rem;
+    background-color: #6d6875;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: seashell;
 }
 
 header {
@@ -20,6 +30,8 @@ header {
     height: 4rem;
     position: relative;
     z-index: 3;
+    overflow: hidden;
+    background-color: white;
 }
 
 .logo {
@@ -34,6 +46,8 @@ header {
 .logo a {
     text-decoration: none;
     color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 /* List of Menus */
@@ -113,9 +127,13 @@ nav li:hover {
     transition: opacity 0.15s ease-in;
 }
 
-.account i,
+.account i {
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
 .cart i {
-    padding: 0.5rem;
+    padding: 0.5rem 0.4rem;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -142,7 +160,7 @@ nav li:hover {
 }
 
 .close-search i {
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
@@ -202,7 +220,3 @@ nav li:hover {
     transform: translateX(0%);
 }
 
-.hero {
-    height: 80vh;
-    background-color: skyblue;
-}
