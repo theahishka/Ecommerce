@@ -1,0 +1,157 @@
+.designer1 {
+    display: flex;
+    padding-top: 3rem;
+    background-color: #F6F1DE;
+    color: black;
+}
+
+.knitwear {
+    width: 50%;
+    height: 90vh;
+    background-color: #F6F1DE;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.knitwear h4 {
+    font-size: 1.5rem;
+}
+
+.knitwear img {
+    height: 60%;
+    width: auto;
+}
+
+.knitwear a {
+    border: solid 3px hsl(0, 100%, 15.6%);
+    background-color: white;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.knitwear a:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
+.banner1 {
+    width: 50%;
+    height: 90vh;
+    background-image: url("./pics/shuvak.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F6F1DE;
+}
+
+.designer2 {
+    display: flex;
+    padding-top: 3rem;
+    background-color: #F6F1DE;
+    color: black;
+    padding-bottom: 3rem;
+}
+
+.banner2 {
+    width: 50%;
+    height: 90vh;
+    background-image: url("./pics/img1.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F6F1DE;
+}
+
+.dress {
+    width: 50%;
+    height: 90vh;
+    background-color: #F6F1DE;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dress h4 {
+    font-size: 1.5rem;
+}
+
+.dress img {
+    height: 60%;
+    width: auto;
+}
+
+.dress a {
+    border: solid 3px hsl(0, 100%, 15.6%);
+    background-color: white;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.dress a:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
+/* Shoes */
+
+.designer3 {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.designer3 img {
+    width: 35%;
+    height: auto;
+}
+
+.designer3 .shoes {
+    
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shoes h3 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.shoes p {
+    width: 60%;
+    text-align: center;
+}
+
+.shoes a {
+    border: solid 3px hsl(0, 100%, 15.6%);
+    background-color: white;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.shoes a:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
+.shoes .shoes-imgs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shoes .shoes-imgs img {
+    width: 20%;
+}
