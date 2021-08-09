@@ -127,3 +127,13 @@ function openAccount() {
         cartWindow.classList.toggle("cart-open");
     }
 }
+
+// Window width 1100px
+
+const burger = document.querySelector(".burger");
+
+burger.addEventListener("click", menuOpen);
+
+function menuOpen() {
+    
+}

@@ -30,8 +30,11 @@ header {
     height: 4rem;
     position: relative;
     z-index: 3;
-    overflow: hidden;
     background-color: white;
+}
+
+.header2 {
+    display: none;
 }
 
 .logo {
@@ -195,7 +198,6 @@ nav li:hover {
     background-color: white;
     right: 0;
     transform: translateX(100%);
-    overflow: hidden;
     transition: transform 0.4s ease-in;
 }
 
@@ -212,10 +214,112 @@ nav li:hover {
     background-color: purple;
     right: 0;
     transform: translateX(100%);
-    overflow: hidden;
     transition: transform 0.4s ease-in;
 }
 
 .account-open {
     transform: translateX(0%);
+}
+
+.menu-window {
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        overflow-x: scroll;
+    }
+
+    .search-window {
+        display: none;
+    }
+
+    .cart-window {
+        display: none;
+    }
+
+    .account-window {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    .header2 {
+        display: grid;
+        grid-template: 1fr / 20% 1fr 20% ;
+        height: 4rem;
+        position: relative;
+        min-width: 280px;
+    }
+
+    .burger {
+        justify-self: center;
+        align-self: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .line {
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        margin: 0.7rem 0 0.7rem 0;
+    }
+
+    .logo2 {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .logo2 a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .nav-btns2 {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-btns2 i {
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+
+    .nav-btns2 i:hover {
+        background-color: rgb(238, 238, 238);
+    }
+
+    .nav-btns2 a {
+        color: black;
+    }
+
+    #cart-phone {
+        margin-right: 1rem;
+        padding-top: 0.6rem;
+    }
+
+    .menu-window {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 4rem;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        z-index: 100;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header2 {
+        grid-template: 1fr / 30% 1fr 30% ;
+    }
 }
