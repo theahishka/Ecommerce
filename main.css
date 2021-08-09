@@ -48,12 +48,30 @@
     background-color: #F6F1DE;
 }
 
+@media only screen and (max-width: 800px) {
+    .designer1 {
+        display: block;
+        min-width: 280px;
+    }
+
+    .knitwear {
+        width: 100%;
+    }
+
+    .banner1 {
+        width: 100%;
+    }
+}
+
+/* designer 2 */
+
 .designer2 {
     display: flex;
     padding-top: 3rem;
     background-color: #F6F1DE;
     color: black;
     padding-bottom: 3rem;
+
 }
 
 .banner2 {
@@ -99,6 +117,31 @@
     color: white;
 }
 
+@media only screen and (max-width: 800px) {
+    .designer2 {
+        display: block;
+        min-width: 280px;
+    }
+
+    .banner2 {
+        width: 100%;
+    }
+
+    .dress {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .banner2 {
+        height: 60vh;
+    }
+
+    .banner1 {
+        height: 60vh;
+    }
+}
+
 /* Shoes */
 
 .designer3 {
@@ -108,15 +151,15 @@
     justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    min-height: 500px;
+
 }
 
 .designer3 img {
     width: 35%;
-    height: auto;
 }
 
 .designer3 .shoes {
-    
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -137,7 +180,7 @@
 .shoes a {
     border: solid 3px hsl(0, 100%, 15.6%);
     background-color: white;
-    padding: 0.7rem;
+    padding: 0.7rem 2rem;
     cursor: pointer;
 }
 
@@ -154,4 +197,249 @@
 
 .shoes .shoes-imgs img {
     width: 20%;
+}
+
+.mobile-shoes {
+    display: none;
+}
+
+.mobile-shoes2 {
+    min-width: 280px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile-shoes2 p {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.mobile-shoes2 a {
+    border: solid 3px hsl(0, 100%, 15.6%);
+    background-color: white;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+}
+
+.mobile-shoes2 a:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
+#shoes-title {
+    min-width: 280px;
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .designer3 .shoes {
+        display: none;
+    }
+
+    .mobile-shoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 30%;
+    }
+
+    .mobile-shoes img {
+        width: 80%;
+    }
+
+    .designer3 img {
+        width: 70%;
+    }
+
+    .mobile-shoes2 {
+        display: flex;
+    }
+
+    #shoes-title {
+        display: block;
+        width: 90%;
+        margin: 2rem auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .designer3 {
+        min-height: 200px;
+        min-width: 280px;
+    }
+
+    .designer3 img {
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* Suggestions Section */
+.suggestions-container {
+    width: 100%;
+    margin: 3rem 0 3rem 0;
+    background-color: white;
+    min-width: 280px;
+}
+
+.suggestions-container h2 {
+    text-align: center;
+}
+
+.suggestions {
+    display: grid;
+    grid-template: 1fr / 5% 1fr 5%;
+    margin: 3rem 0;
+}
+
+.invisible1 {
+    z-index: 4;
+    background-color: white;
+}
+
+.visible1 {
+    width: 200%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: left;
+    align-self: center;
+    transition: transform 0.2s ease-in;
+}
+
+.invisible2 {
+    z-index: 4;
+    background-color: white;
+}
+
+.sug {
+    width: 22%;
+    height: 50vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.sug1 {
+    background-image: url("./pics/sug1.jpg");
+}
+
+.sug2 {
+    background-image: url("./pics/sug2.jpg");
+}
+
+.sug3 {
+    background-image: url("./pics/sug3.jpg");
+}
+
+.sug4 {
+    background-image: url("./pics/sug4.jpg");
+}
+
+.sug5 {
+    background-image: url("./pics/sug5.jpg");
+}
+
+.sug6 {
+    background-image: url("./pics/sug6.jpg");
+}
+
+.sug7 {
+    background-image: url("./pics/sug7.jpg");
+}
+
+.sug8 {
+    background-image: url("./pics/sug8.jpg");
+}
+
+.suggestions-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(161, 161, 161);
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: hsl(0, 100%, 15.6%);
+}
+
+.a-left {
+    transform: rotate(135deg);
+    border: solid rgb(161, 161, 161);
+    border-width: 0 1px 1px 0;
+    padding: 6px;
+    cursor: default;
+}
+
+.a-right {
+    transform: rotate(-45deg);
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.dot1 {
+    background-color: hsl(0, 100%, 15.6%);
+}
+
+@media only screen and (max-width: 1100px) {
+    .visible1 {
+        width: 200%;
+        justify-content: space-between;
+    }
+
+    .sug {
+        width: 15%;
+        height: 15rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .visible1 {
+        width: 200%;
+        flex-wrap: wrap;
+    }
+
+    .sug {
+        height: 15rem;
+        width: 25%;
+        margin: 1rem 0;
+    }
+
+    .dot2 {
+        display: none;
+    }
+
+    .dot3 {
+        display: none;
+    }
+
+    .dot4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .sug {
+        height: 10rem;
+        width: 25%;
+    }
 }

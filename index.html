@@ -8,6 +8,7 @@
         <link href="./header.css" rel="stylesheet" type="text/css" />
         <link href="./hero.css" rel="stylesheet" type="text/css" />
         <link href="./main.css" rel="stylesheet" type="text/css" />
+        <link href="./news-footer.css" rel="stylesheet" type="text/css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +31,8 @@
             crossorigin="anonymous"
         />
         <script src="./header.js" defer></script>
+        <script src="./main-buttons.js" defer></script>
+        <script src="./news-footer.js" defer></script>
     </head>
     <body>
         <!-- <div class="free-shipping">FREE SHIPPING ON ALL ORDERS</div> -->
@@ -87,16 +90,26 @@
                     <a>DISCOVER MORE</a>
                 </div>
             </section>
+
+            <!-- Shoes -->
+
+            <h3 id="shoes-title">Flexible Shoes</h3>
+
             <section class="designer3">
                 <img src="./pics/shoes1.jpg" />
+                <div class="mobile-shoes">
+                    <img src="./pics/shoes2.jpg" />
+                    <img src="./pics/shoes3.jpg" />
+                    <img src="./pics/shoes4.jpg" />
+                </div>
                 <div class="shoes">
                     <h3>Flexible Shoes</h3>
                     <p>
                         Sneakers made from wool and silk yarn. Featuring
                         different color hues. Additionally, it is lightweight
-                        and flexible. Material feels just like an actual jumper
+                        and flexible. Material feels just like an actual jumper.
                     </p>
-                    <a>DISCOVER MORE</a>
+                    <a>SHOP NOW</a>
                     <div class="shoes-imgs">
                         <img src="./pics/shoes2.jpg" />
                         <img src="./pics/shoes3.jpg" />
@@ -105,6 +118,139 @@
                     </div>
                 </div>
             </section>
+
+            <div class="mobile-shoes2">
+                <p>
+                    Sneakers made from wool and silk yarn. Featuring different
+                    color hues. Additionally, it is lightweight and flexible.
+                    Material feels just like an actual jumper.
+                </p>
+                <a>SHOP NOW</a>
+            </div>
+
+            <!-- Suggestions -->
+
+            <section class="suggestions-container">
+                <h2>Suggestions for the Season</h2>
+                <div class="suggestions">
+                    <div class="invisible1"></div>
+                    <div class="visible1">
+                        <div class="sug1 sug"></div>
+                        <div class="sug2 sug"></div>
+                        <div class="sug3 sug"></div>
+                        <div class="sug4 sug"></div>
+                        <div class="sug5 sug"></div>
+                        <div class="sug6 sug"></div>
+                        <div class="sug7 sug"></div>
+                        <div class="sug8 sug"></div>
+                    </div>
+                    <div class="invisible2"></div>
+                </div>
+                <div class="suggestions-buttons">
+                    <span class="arrow a-left"></span>
+                    <span class="dot dot1"></span>
+                    <span class="dot dot2"></span>
+                    <span class="dot dot3"></span>
+                    <span class="dot dot4"></span>
+                    <span class="dot dot5"></span>
+                    <span class="arrow a-right"></span>
+                </div>
+            </section>
         </main>
+        <section class="newsletter">
+            <div class="subscribe-text">
+                <h4>Subscribe To Our newsletter</h4>
+                <p>Be always updated with the latest exclusive news</p>
+            </div>
+            <div class="subscribe-input">
+                <div class="input-div">
+                    <input
+                        id="subscribe-box"
+                        type="text"
+                        placeholder="Your Email Address"
+                    />
+                </div>
+                <a
+                    ><p>Subscribe</p>
+                    <i class="fas fa-arrow-right"></i
+                ></a>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footer-container">
+                <div class="get-in-touch foot">
+                    <div class="can-see can1">
+                        <p>Get In Touch</p>
+                        <i id="chevron1" class="fas fa-chevron-up"></i>
+                    </div>
+                    <hr />
+                    <div class="hidden hidden1">
+                        <a>Contacts</a>
+                    </div>
+                </div>
+
+                <div class="company foot">
+                    <div class="can-see can2">
+                        <p>Company</p>
+                        <i id="chevron2" class="fas fa-chevron-up"></i>
+                    </div>
+                    <hr />
+                    <div class="hidden hidden2">
+                        <a>Stores</a>
+                        <a>Career</a>
+                        <a>Textile</a>
+                    </div>
+                </div>
+
+                <div class="services foot">
+                    <div class="can-see can3">
+                        <p>Services</p>
+                        <i id="chevron3" class="fas fa-chevron-up"></i>
+                    </div>
+                    <hr />
+                    <div class="hidden hidden3">
+                        <a>Returns & Exchanges</a>
+                        <a>Delivery & Shipping</a>
+                        <a>FAQ</a>
+                    </div>
+                </div>
+
+                <div class="legal foot">
+                    <div class="can-see can4">
+                        <p>Legal</p>
+                        <i id="chevron4" class="fas fa-chevron-up"></i>
+                    </div>
+                    <hr />
+                    <div class="hidden hidden4">
+                        <a>Compliance</a>
+                        <a>Legal</a>
+                        <a>Privacy Policy & Cookies Notice</a>
+                    </div>
+                </div>
+
+                <div class="follow">
+                    <p>Follow Us</p>
+                    <div class="follow-icons">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                </div>
+                <div class="scroll-arrow">
+                    <div class="scroll-up">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">
+                <p>© Loro Piana, 2021. All Rights Reserved.</p>
+                <div class="mobile-scroll-arrow">
+                    <div class="scroll-up">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
