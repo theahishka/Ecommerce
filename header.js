@@ -37,6 +37,7 @@ function searchBoxOpen() {
         cartWindow.classList.toggle("cart-open");
     }
 
+    // account window close
     if (accountWindow.getBoundingClientRect().x < window.innerWidth) {
         accountWindow.classList.toggle("account-open");
     }
@@ -130,10 +131,69 @@ function openAccount() {
 
 // Window width 1100px
 
+// Open Menu
+
 const burger = document.querySelector(".burger");
+const menuWindow = document.querySelector(".menu-window");
+const body = document.body;
+const burgerLineTop = document.querySelector(".line1");
+const burgerLineBottom = document.querySelector(".line2");
+
+const main = document.querySelector("main");
+const newsLetter = document.querySelector(".newsletter");
+const footer = document.querySelector(".footer");
+const hero = document.querySelector(".hero");
 
 burger.addEventListener("click", menuOpen);
 
 function menuOpen() {
-    
+    if (menuWindow.getBoundingClientRect().x === 0) {
+        body.style.overflowY = "scroll";
+        menuWindow.style.transform = "translateX(-100%)";
+        menuWindow.style.opacity = "0";
+        burgerLineBottom.style.transform = "translateY(-6.6px) rotateZ(0)";
+        burgerLineTop.style.transform = "translateY(6.6px) rotateZ(0)";
+
+        main.style.filter = "";
+        main.style.pointerEvents = "";
+
+        newsLetter.style.filter = "";
+        newsLetter.style.pointerEvents = "";
+
+        footer.style.filter = "";
+        footer.style.pointerEvents = "";
+
+        hero.style.filter = "";
+        hero.style.pointerEvents = "";
+
+        setTimeout(function () {
+            burgerLineTop.style.transform = "rotateZ(0) translateY(0)";
+            burgerLineBottom.style.transform = "rotateZ(0) translateY(0)";
+        }, 200);
+
+    } else {
+        body.style.overflowY = "hidden";
+        menuWindow.style.transform = "translateX(0)";
+        menuWindow.style.opacity = "1";
+        burgerLineTop.style.transform = "translateY(6.6px)";
+        burgerLineBottom.style.transform = "translateY(-6.6px)";
+
+        main.style.filter = "blur(3px)";
+        main.style.pointerEvents = "none";
+
+        newsLetter.style.filter = "blur(3px)";
+        newsLetter.style.pointerEvents = "none";
+
+        footer.style.filter = "blur(3px)";
+        footer.style.pointerEvents = "none";
+
+        hero.style.filter = "blur(3px)";
+        hero.style.pointerEvents = "none";
+
+        setTimeout(function () {
+            burgerLineTop.style.transform = "translateY(6.6px) rotateZ(45deg)";
+            burgerLineBottom.style.transform = "translateY(-6.6px) rotateZ(-45deg)";
+        }, 200);
+    }
 }
+

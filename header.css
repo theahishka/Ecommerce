@@ -28,9 +28,11 @@ header {
     display: grid;
     grid-template: 1fr / 30% 1fr 30%;
     height: 4rem;
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    width: 100vw;
+    z-index: 30;
     background-color: white;
+    border-bottom: rgb(230, 230, 230) solid 1px;
 }
 
 .header2 {
@@ -181,8 +183,8 @@ nav li:hover {
 .search-window {
     width: 100%;
     height: 50vh;
-    position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 20;
     background-color: white;
     transform: translateY(-150%);
     overflow: hidden;
@@ -193,10 +195,11 @@ nav li:hover {
 .cart-window {
     width: 30%;
     height: 20rem;
-    position: absolute;
-    z-index: 3;
+    position: fixed;
+    z-index: 30;
     background-color: white;
     right: 0;
+    top: 4rem;
     transform: translateX(100%);
     transition: transform 0.4s ease-in;
 }
@@ -209,8 +212,9 @@ nav li:hover {
 .account-window {
     width: 30%;
     height: 20rem;
-    position: absolute;
-    z-index: 3;
+    position: fixed;
+    z-index: 30;
+    top: 4rem;
     background-color: purple;
     right: 0;
     transform: translateX(100%);
@@ -250,8 +254,11 @@ nav li:hover {
         display: grid;
         grid-template: 1fr / 20% 1fr 20% ;
         height: 4rem;
-        position: relative;
-        min-width: 280px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 30;
+        border-bottom: solid rgb(230, 230, 230) 1px;
     }
 
     .burger {
@@ -265,7 +272,8 @@ nav li:hover {
         width: 30px;
         height: 2px;
         background-color: black;
-        margin: 0.7rem 0 0.7rem 0;
+        margin: 11.2px 0 11.2px 0;
+        transition: transform 0.15s ease-in;
     }
 
     .logo2 {
@@ -311,10 +319,20 @@ nav li:hover {
         left: 0;
         top: 4rem;
         bottom: 0;
-        right: 0;
+        width: 50%;
         background-color: white;
-        z-index: 100;
+        z-index: 30;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 0.2s ease-in, opacity 0.2s ease-in;
         overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .menu-window {
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -323,3 +341,4 @@ nav li:hover {
         grid-template: 1fr / 30% 1fr 30% ;
     }
 }
+

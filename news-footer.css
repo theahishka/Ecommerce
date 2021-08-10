@@ -4,6 +4,7 @@
     background-color: hsl(0, 100%, 15.6%);
     min-width: 280px;
     min-height: 75px;
+    transition: filter 0.4s ease-in;
 }
 
 .subscribe-text {
@@ -115,6 +116,7 @@
 .footer {
     min-width: 280px;
     overflow-x: scroll;
+    transition: filter 0.4s ease-in;
 }
 .footer-container {
     display: flex;

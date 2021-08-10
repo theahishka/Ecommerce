@@ -9,11 +9,18 @@
         <link href="./hero.css" rel="stylesheet" type="text/css" />
         <link href="./main.css" rel="stylesheet" type="text/css" />
         <link href="./news-footer.css" rel="stylesheet" type="text/css" />
+        <link href="./nav-anime.css" rel="stylesheet" type="text/css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
             rel="stylesheet"
         />
         <!-- Pacifico -->
@@ -33,20 +40,25 @@
         <script src="./header.js" defer></script>
         <script src="./main-buttons.js" defer></script>
         <script src="./news-footer.js" defer></script>
+        <script src="./nav-anime.js" defer></script>
     </head>
     <body>
         <!-- <div class="free-shipping">FREE SHIPPING ON ALL ORDERS</div> -->
         <div class="header2">
             <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
             </div>
             <div class="logo2">
                 <a href="#">Softy</a>
             </div>
             <div class="nav-btns2">
-                <a href=""><i id="cart-phone" class="fas fa-shopping-cart"></i></a>
-                <a href=""><i id="account-user-phone" class="fas fa-user"></i></a>
+                <a href=""
+                    ><i id="cart-phone" class="fas fa-shopping-cart"></i
+                ></a>
+                <a href=""
+                    ><i id="account-user-phone" class="fas fa-user"></i
+                ></a>
             </div>
         </div>
         <header>
@@ -75,8 +87,59 @@
                 <i class="fas fa-times"></i>
             </div>
         </header>
+        <div class="relative-div"></div>
         <!-- For Navigation Animations -->
-        <section class="menu-window"></section>
+        <section class="menu-window">
+            <div class="cont-for-cont">
+                <div class="menu-window-container">
+                    <div class="mobile-search">
+                        <input type="text" placeholder="Search for products..." />
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="new-releases menu-sections">
+                        <p>New Releases</p>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <hr class="menu-division" />
+                    <div class="men menu-sections">
+                        <p>Men</p>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <hr class="menu-division" />
+                    <div class="women menu-sections">
+                        <p>Women</p>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <hr class="menu-division" />
+                    <div class="sale menu-sections">
+                        <p>Sale</p>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <hr class="menu-division" />
+                    <div class="essentials menu-sections">
+                        <p>Essentials</p>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+                <section class="submenu">
+                    <div class="new-releases-hidden sub-sections">
+                        <div class="sub-menu-title">
+                            <i class="fas fa-caret-left"></i>
+                            <p>New Releases</p>
+                        </div>
+                        <div class="sub-menu-choices">
+                            <div class="sub-choice">
+                                <p>Men</p>
+                            </div>
+                            <div class="sub-choice">
+                                <p>Women</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
         <section class="search-window"></section>
         <section class="cart-window"></section>
         <section class="account-window"></section>
@@ -161,13 +224,13 @@
                     <div class="invisible2"></div>
                 </div>
                 <div class="suggestions-buttons">
-                    <span class="arrow a-left"></span>
+                    <i class="fas fa-chevron-left a-left"></i>
                     <span class="dot dot1"></span>
                     <span class="dot dot2"></span>
                     <span class="dot dot3"></span>
                     <span class="dot dot4"></span>
                     <span class="dot dot5"></span>
-                    <span class="arrow a-right"></span>
+                    <i class="fas fa-chevron-right a-right"></i>
                 </div>
             </section>
         </main>
