@@ -144,6 +144,8 @@ const newsLetter = document.querySelector(".newsletter");
 const footer = document.querySelector(".footer");
 const hero = document.querySelector(".hero");
 
+// const contForCont = document.querySelector(".cont-for-cont");
+
 burger.addEventListener("click", menuOpen);
 
 function menuOpen() {
@@ -165,6 +167,14 @@ function menuOpen() {
 
         hero.style.filter = "";
         hero.style.pointerEvents = "";
+
+        contForCont.style.transform = "translateX(0)";
+        setTimeout(function() {
+            newReleasesHidden.style.display = "none";
+            manHidden.style.display = "none";
+            womanHidden.style.display = "none";
+            saleHidden.style.display = "none"
+        }, 200);
 
         setTimeout(function () {
             burgerLineTop.style.transform = "rotateZ(0) translateY(0)";

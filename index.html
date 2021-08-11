@@ -66,8 +66,8 @@
             <nav>
                 <ul>
                     <li>New Releases</li>
-                    <li>Men</li>
-                    <li>Women</li>
+                    <li>Man</li>
+                    <li>Woman</li>
                     <li>Sale</li>
                 </ul>
             </nav>
@@ -93,21 +93,25 @@
             <div class="cont-for-cont">
                 <div class="menu-window-container">
                     <div class="mobile-search">
-                        <input type="text" placeholder="Search for products..." />
+                        <input
+                            type="text"
+                            placeholder="Search for products..."
+                        />
                         <i class="fas fa-search"></i>
                     </div>
+                    <hr class="menu-division" />
                     <div class="new-releases menu-sections">
                         <p>New Releases</p>
                         <i class="fas fa-caret-right"></i>
                     </div>
                     <hr class="menu-division" />
                     <div class="men menu-sections">
-                        <p>Men</p>
+                        <p>Man</p>
                         <i class="fas fa-caret-right"></i>
                     </div>
                     <hr class="menu-division" />
                     <div class="women menu-sections">
-                        <p>Women</p>
+                        <p>Woman</p>
                         <i class="fas fa-caret-right"></i>
                     </div>
                     <hr class="menu-division" />
@@ -116,30 +120,108 @@
                         <i class="fas fa-caret-right"></i>
                     </div>
                     <hr class="menu-division" />
-                    <div class="essentials menu-sections">
-                        <p>Essentials</p>
-                        <i class="fas fa-caret-right"></i>
-                    </div>
                 </div>
                 <section class="submenu">
                     <div class="new-releases-hidden sub-sections">
-                        <div class="sub-menu-title">
+                        <div
+                            id="new-releases-hidden-title"
+                            class="sub-menu-title"
+                        >
                             <i class="fas fa-caret-left"></i>
                             <p>New Releases</p>
                         </div>
                         <div class="sub-menu-choices">
+                            <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Men</p>
+                                <p>Man</p>
                             </div>
+                            <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Women</p>
+                                <p>Woman</p>
                             </div>
+                            <hr class="menu-division" />
+                        </div>
+                    </div>
+                    <div id="man-hidden" class="sub-sections">
+                        <div id="man-hidden-title" class="sub-menu-title">
+                            <i class="fas fa-caret-left"></i>
+                            <p>Man</p>
+                        </div>
+
+                        <div class="sub-menu-choices">
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Knitwear</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Coats</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Shirts</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Accessories</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Shoes</p>
+                            </div>
+                            <hr class="menu-division" />
+                        </div>
+                    </div>
+                    <div id="woman-hidden" class="sub-sections">
+                        <div id="woman-hidden-title" class="sub-menu-title">
+                            <i class="fas fa-caret-left"></i>
+                            <p>Woman</p>
+                        </div>
+                        <div class="sub-menu-choices">
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Knitwear</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Coats</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Dresses</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Accessories</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Shoes</p>
+                            </div>
+                            <hr class="menu-division" />
+                        </div>
+                    </div>
+                    <div id="sale-hidden" class="sub-sections">
+                        <div id="sale-hidden-title" class="sub-menu-title">
+                            <i class="fas fa-caret-left"></i>
+                            <p>Sale</p>
+                        </div>
+                        <div class="sub-menu-choices">
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Man</p>
+                            </div>
+                            <hr class="menu-division" />
+                            <div class="sub-choice">
+                                <p>Woman</p>
+                            </div>
+                            <hr class="menu-division" />
                         </div>
                     </div>
                 </section>
             </div>
         </section>
-        
+
         <section class="search-window"></section>
         <section class="cart-window"></section>
         <section class="account-window"></section>
@@ -260,7 +342,7 @@
                         <p>Get In Touch</p>
                         <i id="chevron1" class="fas fa-chevron-up"></i>
                     </div>
-                    <hr />
+                    <hr class="footer-division" />
                     <div class="hidden hidden1">
                         <a>Contacts</a>
                     </div>
@@ -271,7 +353,7 @@
                         <p>Company</p>
                         <i id="chevron2" class="fas fa-chevron-up"></i>
                     </div>
-                    <hr />
+                    <hr class="footer-division" />
                     <div class="hidden hidden2">
                         <a>Stores</a>
                         <a>Career</a>
@@ -284,7 +366,7 @@
                         <p>Services</p>
                         <i id="chevron3" class="fas fa-chevron-up"></i>
                     </div>
-                    <hr />
+                    <hr class="footer-division" />
                     <div class="hidden hidden3">
                         <a>Returns & Exchanges</a>
                         <a>Delivery & Shipping</a>
@@ -297,7 +379,7 @@
                         <p>Legal</p>
                         <i id="chevron4" class="fas fa-chevron-up"></i>
                     </div>
-                    <hr />
+                    <hr class="footer-division" />
                     <div class="hidden hidden4">
                         <a>Compliance</a>
                         <a>Legal</a>
@@ -321,7 +403,7 @@
                 </div>
             </div>
             <div class="rights">
-                <p>© Loro Piana, 2021. All Rights Reserved.</p>
+                <p>© Softy, 2020. All Rights Reserved.</p>
                 <div class="mobile-scroll-arrow">
                     <div class="scroll-up">
                         <i class="fas fa-arrow-up"></i>

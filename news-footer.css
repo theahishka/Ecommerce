@@ -218,7 +218,7 @@
     margin-left: 3rem;
 }
 
-hr {
+.footer-division {
     display: none;
 }
 
@@ -296,7 +296,7 @@ hr {
         transition: max-height 0.2s ease-in;
     }
 
-    hr {
+    .footer-division {
         display: block;
         background-color: white;
         height: 1px;

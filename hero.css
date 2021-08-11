@@ -12,6 +12,8 @@
     min-width: 280px;
     transition: filter 0.4s ease-in;
     z-index: 15;
+    position: relative;
+    top: 4rem;
 }
 
 .hero h3 {
