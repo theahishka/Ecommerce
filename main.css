@@ -43,6 +43,11 @@ main {
     color: white;
 }
 
+.knitwear a:active {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
 .banner1 {
     width: 50%;
     height: 90vh;
@@ -124,6 +129,11 @@ main {
     color: white;
 }
 
+.dress a:active {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
 @media only screen and (max-width: 800px) {
     .designer2 {
         display: block;
@@ -196,6 +206,11 @@ main {
     color: white;
 }
 
+.shoes a:active {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
 .shoes .shoes-imgs {
     display: flex;
     justify-content: space-around;
@@ -233,6 +248,11 @@ main {
 }
 
 .mobile-shoes2 a:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: white;
+}
+
+.mobile-shoes2 a:active {
     background-color: hsl(0, 100%, 15.6%);
     color: white;
 }

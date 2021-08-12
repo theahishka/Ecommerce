@@ -65,10 +65,34 @@
             <div class="logo"><a href="#">Softy</a></div>
             <nav>
                 <ul>
-                    <li>New Releases</li>
-                    <li>Man</li>
-                    <li>Woman</li>
-                    <li>Sale</li>
+                    <li class="header-list">New Releases</li>
+                    <li class="header-list">Man</li>
+                    <li class="header-list">Woman</li>
+                    <li class="header-list">Sale</li>
+                    <div class="new-releases-slide">
+                        <div class="new-releases-cont">
+                            <div class="new-releases-woman">
+                                <div class="new-releases-woman-pics">
+                                    <a href=""><img src="./pics/menu1w.jpg"></a>
+                                    <a href=""><img src="./pics/manu2w.jpg"></a>
+                                </div>
+                                <div class="new-releases-woman-link">
+                                    <a>Woman</a>
+                                </div>
+                            </div>
+                            <div class="new-releases-man">
+                                <div class="new-releases-man">
+                                    <div class="new-releases-man-pics">
+                                        <a href=""><img src="./pics/menu1w.jpg"></a>
+                                        <a href=""><img src="./"></a>
+                                    </div>
+                                    <div class="new-releases-man-link">
+                                        <a>Woman</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
             </nav>
             <div id="nav-btns" class="nav-buttons">
@@ -87,6 +111,7 @@
                 <i class="fas fa-times"></i>
             </div>
         </header>
+
         <div class="relative-div"></div>
         <!-- For Navigation Animations -->
         <section class="menu-window">
@@ -327,9 +352,11 @@
                         id="subscribe-box"
                         type="text"
                         placeholder="Your Email Address"
+                        name=""
+                        
                     />
                 </div>
-                <a
+                <a class="email-button email-btn"
                     ><p>Subscribe</p>
                     <i class="fas fa-arrow-right"></i
                 ></a>

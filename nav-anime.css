@@ -37,9 +37,16 @@
     background-color: rgb(240, 240, 240);
     cursor: pointer;
     font-family: "Railway", sans-serif;
+    overflow: hidden;
+    z-index: 5;
 }
 
 .menu-sections:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: seashell;
+}
+
+.menu-sections:active {
     background-color: hsl(0, 100%, 15.6%);
     color: seashell;
 }
@@ -85,6 +92,11 @@
     color: seashell;
 }
 
+.sub-menu-title:active {
+    background-color: rgb(43, 0, 0);
+    color: seashell;
+}
+
 .sub-menu-title p {
     align-self: center;
     justify-self: center;
@@ -113,6 +125,11 @@
 }
 
 .sub-choice:hover {
+    background-color: hsl(0, 100%, 15.6%);
+    color: seashell;
+}
+
+.sub-choice:active {
     background-color: hsl(0, 100%, 15.6%);
     color: seashell;
 }

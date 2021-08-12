@@ -189,6 +189,7 @@ nav li:hover {
     transform: translateY(-150%);
     overflow: hidden;
     transition: transform 0.4s ease-in;
+    border-bottom: 1px solid rgb(230, 230, 230);
 }
 
 /* Cart Window Animate */
@@ -342,3 +343,68 @@ nav li:hover {
     }
 }
 
+/* Header List Animation */
+
+
+.new-releases-slide {
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    z-index: -1;
+    left: 0;
+    /* opacity: 0; */
+    top: 4rem;
+    background-color: white;
+    /* transform: translateY(-150%); */
+    border-bottom: rgb(230, 230, 230) solid 1px;
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+.new-releases-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.new-releases-woman, .new-releases-man {
+    width: 40%;
+    height: 45vh;
+}
+
+.new-releases-woman-pics {
+    display: flex;
+    justify-content: space-around;
+}
+
+.new-releases-woman-pics img {
+    width: 100%;
+}
+
+.new-releases-woman-pics a {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-releases-woman-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.new-releases-woman-link a {
+    cursor: pointer;
+}
+
+.new-releases-slide:hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.header-list:nth-child(1):hover ~ .new-releases-slide{
+    transform: translateY(0);
+    opacity: 1;
+}
