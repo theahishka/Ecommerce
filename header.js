@@ -91,7 +91,7 @@ function closeSearchBox() {
         navButtons.style.gridColumnStart = "3";
         navButtons.style.gridColumnEnd = "4";
         navButtons.style.marginRight = "3rem";
-        navButtons.style.justifyContent = "right";
+        navButtons.style.justifyContent = "flex-end";
         header.style.gridTemplate = "1fr / 30% 1fr 30%";
         searchBar.style.transform = "scale(1)";
         navBar.style.display = "block";

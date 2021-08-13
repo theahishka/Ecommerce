@@ -10,6 +10,7 @@
         <link href="./main.css" rel="stylesheet" type="text/css" />
         <link href="./news-footer.css" rel="stylesheet" type="text/css" />
         <link href="./nav-anime.css" rel="stylesheet" type="text/css" />
+        <link href="./menu-anime.css" rel="stylesheet" type="text/css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +38,10 @@
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
             crossorigin="anonymous"
         />
+        <script
+            defer
+            src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+        ></script>
         <script src="./header.js" defer></script>
         <script src="./main-buttons.js" defer></script>
         <script src="./news-footer.js" defer></script>
@@ -70,28 +75,26 @@
                     <li class="header-list">Woman</li>
                     <li class="header-list">Sale</li>
                     <div class="new-releases-slide">
-                        <div class="new-releases-cont">
-                            <div class="new-releases-woman">
-                                <div class="new-releases-woman-pics">
-                                    <a href=""><img src="./pics/menu1w.jpg"></a>
-                                    <a href=""><img src="./pics/manu2w.jpg"></a>
-                                </div>
-                                <div class="new-releases-woman-link">
-                                    <a>Woman</a>
-                                </div>
-                            </div>
-                            <div class="new-releases-man">
-                                <div class="new-releases-man">
-                                    <div class="new-releases-man-pics">
-                                        <a href=""><img src="./pics/menu1w.jpg"></a>
-                                        <a href=""><img src="./"></a>
-                                    </div>
-                                    <div class="new-releases-man-link">
-                                        <a>Woman</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a class="menu-pc-choice" href=""><p>Woman</p></a>
+                        <a class="menu-pc-choice" href=""><p>Man</p></a>
+                    </div>
+                    <div class="man-slide">
+                        <a class="menu-pc-choice" href=""><p>Knitwear</p></a>
+                        <a class="menu-pc-choice" href=""><p>Coats</p></a>
+                        <a class="menu-pc-choice" href=""><p>Shirts</p></a>
+                        <a class="menu-pc-choice" href=""><p>Accessories</p></a>
+                        <a class="menu-pc-choice" href=""><p>Shoes</p></a>
+                    </div>
+                    <div class="woman-slide">
+                        <a class="menu-pc-choice" href=""><p>Knitwear</p></a>
+                        <a class="menu-pc-choice" href=""><p>Coats</p></a>
+                        <a class="menu-pc-choice" href=""><p>Dresses</p></a>
+                        <a class="menu-pc-choice" href=""><p>Accessories</p></a>
+                        <a class="menu-pc-choice" href=""><p>Shoes</p></a>
+                    </div>
+                    <div class="sale-slide">
+                        <a class="menu-pc-choice" href=""><p>Woman</p></a>
+                        <a class="menu-pc-choice" href=""><p>Man</p></a>
                     </div>
                 </ul>
             </nav>
@@ -353,7 +356,6 @@
                         type="text"
                         placeholder="Your Email Address"
                         name=""
-                        
                     />
                 </div>
                 <a class="email-button email-btn"

@@ -7,6 +7,7 @@ main {
     padding-top: 3rem;
     background-color: #F6F1DE;
     color: black;
+
 }
 
 .knitwear {
@@ -169,7 +170,8 @@ main {
     margin-top: 2rem;
     margin-bottom: 2rem;
     min-height: 500px;
-
+    height: 60vh;
+    min-height: 600px;
 }
 
 .designer3 img {

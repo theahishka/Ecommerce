@@ -15,11 +15,13 @@ newReleases.addEventListener("click", openNewReleasesHidden);
 newReleasesHiddenTitle.addEventListener("click", closeNewReleasesHidden);
 
 function openNewReleasesHidden() {
+    subMenu.style.display = "block";
     contForCont.style.transform = "translateX(-100%)";
     newReleasesHidden.style.display = "block";
 }
 
 function closeNewReleasesHidden() {
+    subMenu.style.display = "none";
     contForCont.style.transform = "translateX(0)";
     setTimeout(function () {
         newReleasesHidden.style.display = "none";
@@ -36,11 +38,13 @@ men.addEventListener("click", openManHidden);
 manHiddenTitle.addEventListener("click", closeManHidden);
 
 function openManHidden() {
+    subMenu.style.display = "block";
     contForCont.style.transform = "translateX(-100%)";
     manHidden.style.display = "block";
 }
 
 function closeManHidden() {
+    subMenu.style.display = "none";
     contForCont.style.transform = "translateX(0)";
     setTimeout(function () {
         manHidden.style.display = "none";
@@ -57,11 +61,13 @@ women.addEventListener("click", openWomanHidden);
 womanHiddenTitle.addEventListener("click", closeWomanHidden);
 
 function openWomanHidden() {
+    subMenu.style.display = "block";
     contForCont.style.transform = "translateX(-100%)";
     womanHidden.style.display = "block";
 }
 
 function closeWomanHidden() {
+    subMenu.style.display = "none";
     contForCont.style.transform = "translateX(0)";
     setTimeout(function () {
         womanHidden.style.display = "none";
@@ -78,11 +84,13 @@ sale.addEventListener("click", openSaleHidden);
 saleHiddenTitle.addEventListener("click", closeSaleHidden);
 
 function openSaleHidden() {
+    subMenu.style.display = "block";
     contForCont.style.transform = "translateX(-100%)";
     saleHidden.style.display = "block";
 }
 
 function closeSaleHidden() {
+    subMenu.style.display = "none";
     contForCont.style.transform = "translateX(0)";
     setTimeout(function () {
         saleHidden.style.display = "none";
