@@ -5,12 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Softy</title>
-        <link href="./header.css" rel="stylesheet" type="text/css" />
-        <link href="./hero.css" rel="stylesheet" type="text/css" />
-        <link href="./main.css" rel="stylesheet" type="text/css" />
-        <link href="./news-footer.css" rel="stylesheet" type="text/css" />
-        <link href="./nav-anime.css" rel="stylesheet" type="text/css" />
-        <link href="./menu-anime.css" rel="stylesheet" type="text/css" />
+        <link
+            href="/Sneakers/HomePage/header.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/Sneakers/HomePage/hero.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/Sneakers/HomePage/main.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/Sneakers/HomePage/news-footer.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/Sneakers/HomePage/nav-anime.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/Sneakers/HomePage/menu-anime.css"
+            rel="stylesheet"
+            type="text/css"
+        />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,10 +66,12 @@
             defer
             src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
         ></script>
-        <script src="./header.js" defer></script>
-        <script src="./main-buttons.js" defer></script>
-        <script src="./news-footer.js" defer></script>
-        <script src="./nav-anime.js" defer></script>
+        <script src="/Sneakers/HomePage/scroll-anime.js" defer></script>
+        <script src="/Sneakers/HomePage/header.js" defer></script>
+        <script src="/Sneakers/HomePage/main-buttons.js" defer></script>
+        <script src="/Sneakers/HomePage/news-footer.js" defer></script>
+        <script src="/Sneakers/HomePage/nav-anime.js" defer></script>
+        
     </head>
     <body>
         <!-- <div class="free-shipping">FREE SHIPPING ON ALL ORDERS</div> -->
@@ -87,7 +113,9 @@
                     </div>
                     <div class="woman-slide">
                         <a class="menu-pc-choice" href=""><p>Knitwear</p></a>
-                        <a class="menu-pc-choice" href=""><p>Coats</p></a>
+                        <a class="menu-pc-choice" href=""
+                            ><p>Coats & Shirts</p></a
+                        >
                         <a class="menu-pc-choice" href=""><p>Dresses</p></a>
                         <a class="menu-pc-choice" href=""><p>Accessories</p></a>
                         <a class="menu-pc-choice" href=""><p>Shoes</p></a>
@@ -259,52 +287,55 @@
             <a>SHOP NOW</a>
         </div>
         <main>
-            <section class="designer1">
-                <div class="knitwear">
-                    <h4>Cashmere Knitwear</h4>
-                    <p>Tailored for your comfort</p>
-                    <img src="./pics/Cashmere KnitWear.jpg" />
-                    <a>DISCOVER MORE</a>
-                </div>
-                <div class="banner1"></div>
-            </section>
-            <section class="designer2">
-                <div class="banner2"></div>
-                <div class="dress">
-                    <h4>Cotton Dress</h4>
-                    <p>Simple Design</p>
-                    <img src="./pics/Cotton dress.jpg" />
-                    <a>DISCOVER MORE</a>
-                </div>
-            </section>
+            <div class="just-background">
+                <section class="designer1 designer">
+                    <div class="knitwear">
+                        <h4>Cashmere Knitwear</h4>
+                        <p>Tailored for your comfort</p>
+                        <img src="/Sneakers/pics/Cashmere KnitWear.jpg" />
+                        <a>DISCOVER MORE</a>
+                    </div>
+                    <div class="banner1"></div>
+                </section>
+                <section class="designer2 designer">
+                    <div class="banner2"></div>
+                    <div class="dress">
+                        <h4>Cotton Dress</h4>
+                        <p>Simple Design</p>
+                        <img src="/Sneakers/pics/Cotton dress.jpg" />
+                        <a>DISCOVER MORE</a>
+                    </div>
+                </section>
+            </div>
 
             <!-- Shoes -->
 
-            <h3 id="shoes-title">Flexible Shoes</h3>
-
-            <section class="designer3">
-                <img src="./pics/shoes1.jpg" />
-                <div class="mobile-shoes">
-                    <img src="./pics/shoes2.jpg" />
-                    <img src="./pics/shoes3.jpg" />
-                    <img src="./pics/shoes4.jpg" />
-                </div>
-                <div class="shoes">
-                    <h3>Flexible Shoes</h3>
-                    <p>
-                        Sneakers made from wool and silk yarn. Featuring
-                        different color hues. Additionally, it is lightweight
-                        and flexible. Material feels just like an actual jumper.
-                    </p>
-                    <a>SHOP NOW</a>
-                    <div class="shoes-imgs">
-                        <img src="./pics/shoes2.jpg" />
-                        <img src="./pics/shoes3.jpg" />
-                        <img src="./pics/shoes4.jpg" />
-                        <img src="./pics/shoes5.jpg" />
+            <div class="designer">
+                <h3 id="shoes-title">Flexible Shoes</h3>
+                <section class="designer3">
+                    <img src="/Sneakers/pics/shoes1.jpg" />
+                    <div class="mobile-shoes">
+                        <img src="/Sneakers/pics/shoes2.jpg" />
+                        <img src="/Sneakers/pics/shoes3.jpg" />
+                        <img src="/Sneakers/pics/shoes4.jpg" />
                     </div>
-                </div>
-            </section>
+                    <div class="shoes">
+                        <h3>Flexible Shoes</h3>
+                        <p>
+                            Sneakers made from wool and silk yarn. Featuring
+                            different color hues. Additionally, it is lightweight
+                            and flexible. Material feels just like an actual jumper.
+                        </p>
+                        <a>SHOP NOW</a>
+                        <div class="shoes-imgs">
+                            <img src="/Sneakers/pics/shoes1.jpg" />
+                            <img src="/Sneakers/pics/shoes2.jpg" />
+                            <img src="/Sneakers/pics/shoes3.jpg" />
+                            <img src="/Sneakers/pics/shoes4.jpg" />
+                        </div>
+                    </div>
+                </section>
+            </div>
 
             <div class="mobile-shoes2">
                 <p>
@@ -366,17 +397,6 @@
         </section>
         <section class="footer">
             <div class="footer-container">
-                <div class="get-in-touch foot">
-                    <div class="can-see can1">
-                        <p>Get In Touch</p>
-                        <i id="chevron1" class="fas fa-chevron-up"></i>
-                    </div>
-                    <hr class="footer-division" />
-                    <div class="hidden hidden1">
-                        <a>Contacts</a>
-                    </div>
-                </div>
-
                 <div class="company foot">
                     <div class="can-see can2">
                         <p>Company</p>
@@ -384,9 +404,8 @@
                     </div>
                     <hr class="footer-division" />
                     <div class="hidden hidden2">
-                        <a>Stores</a>
-                        <a>Career</a>
-                        <a>Textile</a>
+                        <a>Contacts</a>
+                        <a>About Us</a>
                     </div>
                 </div>
 
@@ -412,7 +431,7 @@
                     <div class="hidden hidden4">
                         <a>Compliance</a>
                         <a>Legal</a>
-                        <a>Privacy Policy & Cookies Notice</a>
+                        <a>Privacy Policy</a>
                     </div>
                 </div>
 
