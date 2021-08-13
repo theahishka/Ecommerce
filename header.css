@@ -330,14 +330,13 @@ nav li:hover {
         transform: translateX(-100%);
         opacity: 0;
         transition: transform 0.2s ease-in, opacity 0.2s ease-in;
-        overflow: hidden;
+        overflow: scroll;
     }
 }
 
 @media only screen and (max-width: 700px) {
     .menu-window {
         width: 100%;
-        overflow-x: hidden;
     }
 }
 

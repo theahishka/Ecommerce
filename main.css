@@ -265,6 +265,9 @@ main {
 }
 
 @media only screen and (max-width: 1100px) {
+    .designer3 {
+        height: 80vh;
+    }
 
     .designer3 .shoes {
         display: none;
@@ -275,7 +278,7 @@ main {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        width: 30%;
+        width: 20%;
     }
 
     .mobile-shoes img {
@@ -283,7 +286,7 @@ main {
     }
 
     .designer3 img {
-        width: 70%;
+        width: 60%;
     }
 
     .mobile-shoes2 {
@@ -302,6 +305,7 @@ main {
     .designer3 {
         min-height: 200px;
         min-width: 280px;
+        height: 50vh;
     }
 
     .designer3 img {

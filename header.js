@@ -136,6 +136,8 @@ function openAccount() {
 const burger = document.querySelector(".burger");
 const menuWindow = document.querySelector(".menu-window");
 const body = document.body;
+const rootElement = document.getElementById("root-element");
+
 const burgerLineTop = document.querySelector(".line1");
 const burgerLineBottom = document.querySelector(".line2");
 
@@ -150,6 +152,7 @@ burger.addEventListener("click", menuOpen);
 
 function menuOpen() {
     if (menuWindow.getBoundingClientRect().x === 0) {
+        rootElement.style.overflow = "scroll";
         body.style.overflowY = "scroll";
         menuWindow.style.transform = "translateX(-100%)";
         menuWindow.style.opacity = "0";
@@ -182,6 +185,7 @@ function menuOpen() {
         }, 200);
 
     } else {
+        rootElement.style.overflow = "hidden";
         body.style.overflowY = "hidden";
         menuWindow.style.transform = "translateX(0)";
         menuWindow.style.opacity = "1";
