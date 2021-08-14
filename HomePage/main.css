@@ -52,7 +52,7 @@ main {
 .banner1 {
     width: 50%;
     height: 90vh;
-    background-image: url("/Sneakers/pics/shuvak.jpg");
+    background-image: url("../pics/shuvak.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -88,7 +88,7 @@ main {
 .banner2 {
     width: 50%;
     height: 90vh;
-    background-image: url("/Sneakers/pics/img1.jpg");
+    background-image: url("../pics/img1.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -364,35 +364,35 @@ main {
 }
 
 .sug1 {
-    background-image: url("/Sneakers/pics/sug1.jpg");
+    background-image: url("../pics/sug1.jpg");
 }
 
 .sug2 {
-    background-image: url("/Sneakers/pics/sug2.jpg");
+    background-image: url("../pics/sug2.jpg");
 }
 
 .sug3 {
-    background-image: url("/Sneakers/pics/sug3.jpg");
+    background-image: url("../pics/sug3.jpg");
 }
 
 .sug4 {
-    background-image: url("/Sneakers/pics/sug4.jpg");
+    background-image: url("../pics/sug4.jpg");
 }
 
 .sug5 {
-    background-image: url("/Sneakers/pics/sug5.jpg");
+    background-image: url("../pics/sug5.jpg");
 }
 
 .sug6 {
-    background-image: url("/Sneakers/pics/sug9.jpg");
+    background-image: url("../pics/sug9.jpg");
 }
 
 .sug7 {
-    background-image: url("/Sneakers/pics/sug7.jpg");
+    background-image: url("../pics/sug7.jpg");
 }
 
 .sug8 {
-    background-image: url("/Sneakers/pics/sug8.jpg");
+    background-image: url("../pics/sug8.jpg");
 }
 
 .suggestions-buttons {
@@ -482,4 +482,10 @@ main {
 
 .just-background {
     background-color: #F6F1DE;
+}
+
+@media only screen and (max-width: 500px) {
+    .designer {
+        transform: translateY(70px);
+    }
 }

@@ -1,9 +1,11 @@
 const allDesigners = document.querySelectorAll(".designer");
 const designerOne = document.querySelector(".designer1");
 
+
 const options = {
+    root: null,
     threshold: 0,
-    rootMargin: "-200px",
+    rootMargin: "0px 0px -150px 0px",
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
