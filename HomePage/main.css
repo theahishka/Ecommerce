@@ -330,7 +330,9 @@ main {
 .suggestions {
     display: grid;
     grid-template: 1fr / 5% 1fr 5%;
-    margin: 3rem 0;
+    margin: 1rem 0;
+    
+    background-color: white;
 }
 
 .invisible1 {
@@ -346,6 +348,8 @@ main {
     justify-self: left;
     align-self: center;
     transition: transform 0.2s ease-in;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .invisible2 {
@@ -354,17 +358,20 @@ main {
 }
 
 .sug {
-    width: 22%;
-    height: 50vh;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-flex;
+    width: 10%;
+    display: flex;
     flex-wrap: nowrap;
+    position: relative;
+    margin: 0 0.5rem;
+    
+    border-radius: 5px;
 }
 
-.sug1 {
-    background-image: url("../pics/sug1.jpg");
+.sug img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .sug2 {
@@ -436,22 +443,20 @@ main {
     }
 
     .sug {
-        width: 15%;
-        height: 15rem;
+        width: 10%;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .visible1 {
         width: 200%;
+        justify-content: space-around;
         flex-wrap: wrap;
-        
     }
 
     .sug {
-        height: 15rem;
-        width: 25%;
-        margin: 1rem 0;
+        width: 16%;
+        margin: 1rem 2rem;
     }
 
     .dot2 {
@@ -469,8 +474,9 @@ main {
 
 @media only screen and (max-width: 400px) {
     .sug {
-        height: 10rem;
-        width: 25%;
+        
+        width: 20%;
+        margin: 0.5rem 0.5rem;
     }
 }
 

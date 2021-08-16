@@ -1,0 +1,18 @@
+.popup {
+    background-color: rgb(121, 121, 121);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+    transform: translateY(100%);
+    pointer-events: none;
+    transition: transform 0.2s ease-in;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.sug1:hover > .popup1 {
+    transform: translateY(0);
+}
