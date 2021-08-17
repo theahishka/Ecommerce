@@ -1,18 +1,111 @@
 .popup {
-    background-color: rgb(121, 121, 121);
+    background-color: black;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.4;
-    transform: translateY(100%);
+    opacity: 0;
     pointer-events: none;
-    transition: transform 0.2s ease-in;
-    z-index: 1;
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+    z-index: 3;
     border-radius: 5px;
 }
 
+.popupText {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in;
+    
+}
+
+.popupText p {
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+}
+
+.popuphr {
+    margin: 8% auto;
+    text-align: center;
+    width: 80%;
+    background: white;
+    color: white;
+    height: 1px;
+    border: none;
+}
+
 .sug1:hover > .popup1 {
+    opacity: 0.4;
+}
+
+.sug1:hover > .popupText1 {
+    transform: translateY(0);
+    
+}
+
+.sug2:hover > .popup2 {
+    opacity: 0.4;
+}
+
+.sug2:hover > .popupText2 {
+    transform: translateY(0);
+}
+
+.sug3:hover > .popup3 {
+    opacity: 0.4;
+}
+
+.sug3:hover > .popupText3 {
+    transform: translateY(0);
+}
+
+.sug4:hover > .popup4 {
+    opacity: 0.4;
+}
+
+.sug4:hover > .popupText4 {
+    transform: translateY(0);
+}
+
+.sug5:hover > .popup5 {
+    opacity: 0.4;
+}
+
+.sug5:hover > .popupText5 {
+    transform: translateY(0);
+}
+
+.sug6:hover > .popup6 {
+    opacity: 0.4;
+}
+
+.sug6:hover > .popupText6 {
+    transform: translateY(0);
+}
+
+.sug7:hover > .popup7 {
+    opacity: 0.4;
+}
+
+.sug7:hover > .popupText7 {
+    transform: translateY(0);
+}
+
+.sug8:hover > .popup8 {
+    opacity: 0.4;
+}
+
+.sug8:hover > .popupText8 {
     transform: translateY(0);
 }

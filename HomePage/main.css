@@ -1,35 +1,46 @@
-main {
-    transition: filter 0.4s ease-in;
-}
+/* main {
+    margin-top: 3rem;
+} */
 
 .designer1 {
     display: flex;
     padding-top: 3rem;
     background-color: #F6F1DE;
     color: black;
+}
 
+.knitwear-cont {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .knitwear {
-    width: 50%;
-    height: 90vh;
+    width: 100%;
+    height: 80%;
     background-color: #F6F1DE;
     text-align: center;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 500px;
 }
 
 .knitwear h4 {
     font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.knitwear p {
+    margin: 1rem 0;
 }
 
 .knitwear img {
-    height: 60%;
-    width: auto;
+    height: auto;
+    width: 40%;
+    margin: 1rem 0;
 }
 
 .knitwear a {
@@ -37,6 +48,7 @@ main {
     background-color: white;
     padding: 0.7rem;
     cursor: pointer;
+    margin: 1rem 0 2rem 0;
 }
 
 .knitwear a:hover {
@@ -51,19 +63,23 @@ main {
 
 .banner1 {
     width: 50%;
-    height: 90vh;
-    background-image: url("../pics/shuvak.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-color: #F6F1DE;
-    min-height: 500px;
+    height: fit-content;
+}
+
+.banner1 img {
+    width: 100%;
+    height: auto;
 }
 
 @media only screen and (max-width: 800px) {
     .designer1 {
         display: block;
         min-width: 280px;
+    }
+
+    .knitwear-cont {
+        width: 100%;
     }
 
     .knitwear {
@@ -75,11 +91,17 @@ main {
     }
 }
 
+@media only screen and (max-width: 550px) {
+
+    .knitwear img {
+        width: 80%;
+    }
+}
+
 /* designer 2 */
 
 .designer2 {
     display: flex;
-    padding-top: 3rem;
     background-color: #F6F1DE;
     color: black;
     padding-bottom: 3rem;
@@ -87,35 +109,46 @@ main {
 
 .banner2 {
     width: 50%;
-    height: 90vh;
-    background-image: url("../pics/img1.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: auto;
     background-color: #F6F1DE;
-    min-height: 500px;
+}
+
+.banner2 img {
+    width: 100%;
+    height: auto;
+}
+
+.dress-cont {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dress {
-    width: 50%;
-    height: 90vh;
+    width: 100%;
     background-color: #F6F1DE;
     text-align: center;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 500px;
+}
+
+.dress img {
+    width: 40%;
+    height: auto;
+    margin: 1rem 0;
 }
 
 .dress h4 {
     font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
 }
 
-.dress img {
-    height: 60%;
-    width: auto;
+.dress p {
+    margin: 1rem 0;
 }
 
 .dress a {
@@ -123,6 +156,7 @@ main {
     background-color: white;
     padding: 0.7rem;
     cursor: pointer;
+    margin: 1rem 0 0rem 0;
 }
 
 .dress a:hover {
@@ -141,6 +175,11 @@ main {
         min-width: 280px;
     }
 
+    .dress-cont {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
     .banner2 {
         width: 100%;
     }
@@ -150,13 +189,10 @@ main {
     }
 }
 
-@media only screen and (max-width: 400px) {
-    .banner2 {
-        height: 60vh;
-    }
+@media only screen and (max-width: 550px) {
 
-    .banner1 {
-        height: 60vh;
+    .dress img {
+        width: 80%;
     }
 }
 
@@ -169,13 +205,14 @@ main {
     justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    min-height: 500px;
-    height: 60vh;
-    min-height: 600px;
+    /* min-height: 500px; */
+    /* height: 60vh; */
+    /* min-height: 600px; */
 }
 
 .designer3 img {
     width: 35%;
+    height: auto;
 }
 
 .designer3 .shoes {
@@ -184,11 +221,13 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    height: auto;
 }
 
 .shoes h3 {
     font-size: 1.5rem;
     margin-top: 3rem;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .shoes p {
@@ -262,12 +301,13 @@ main {
 #shoes-title {
     min-width: 280px;
     display: none;
+    font-family: "Ubuntu", sans-serif;
 }
 
 @media only screen and (max-width: 1100px) {
-    .designer3 {
+    /* .designer3 {
         height: 80vh;
-    }
+    } */
 
     .designer3 .shoes {
         display: none;
@@ -278,11 +318,15 @@ main {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        width: 20%;
+        width: 30%;
+    }
+
+    .mobile-shoes2 p {
+        width: 80%;
     }
 
     .mobile-shoes img {
-        width: 80%;
+        width: 70%;
     }
 
     .designer3 img {
@@ -305,7 +349,7 @@ main {
     .designer3 {
         min-height: 200px;
         min-width: 280px;
-        height: 50vh;
+        /* height: 50vh; */
     }
 
     .designer3 img {
@@ -325,6 +369,7 @@ main {
 
 .suggestions-container h2 {
     text-align: center;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .suggestions {
@@ -363,7 +408,7 @@ main {
     flex-wrap: nowrap;
     position: relative;
     margin: 0 0.5rem;
-    
+    overflow: hidden;
     border-radius: 5px;
 }
 
@@ -409,8 +454,8 @@ main {
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: rgb(161, 161, 161);
     margin: 0 1rem;
@@ -474,9 +519,12 @@ main {
 
 @media only screen and (max-width: 400px) {
     .sug {
-        
         width: 20%;
         margin: 0.5rem 0.5rem;
+    }
+
+    .popupText p {
+        font-size: 0.8rem;
     }
 }
 
