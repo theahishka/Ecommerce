@@ -159,17 +159,17 @@ function menuOpen() {
         burgerLineBottom.style.transform = "translateY(-6.6px) rotateZ(0)";
         burgerLineTop.style.transform = "translateY(6.6px) rotateZ(0)";
 
-        main.style.filter = "";
-        main.style.pointerEvents = "";
+        // main.style.filter = "";
+        // main.style.pointerEvents = "";
 
-        newsLetter.style.filter = "";
-        newsLetter.style.pointerEvents = "";
+        // newsLetter.style.filter = "";
+        // newsLetter.style.pointerEvents = "";
 
-        footer.style.filter = "";
-        footer.style.pointerEvents = "";
+        // footer.style.filter = "";
+        // footer.style.pointerEvents = "";
 
-        hero.style.filter = "";
-        hero.style.pointerEvents = "";
+        // hero.style.filter = "";
+        // hero.style.pointerEvents = "";
 
         contForCont.style.transform = "translateX(0)";
         setTimeout(function() {
@@ -192,17 +192,17 @@ function menuOpen() {
         burgerLineTop.style.transform = "translateY(6.6px)";
         burgerLineBottom.style.transform = "translateY(-6.6px)";
 
-        main.style.filter = "blur(3px)";
-        main.style.pointerEvents = "none";
+        // main.style.filter = "blur(3px)";
+        // main.style.pointerEvents = "none";
 
-        newsLetter.style.filter = "blur(3px)";
-        newsLetter.style.pointerEvents = "none";
+        // newsLetter.style.filter = "blur(3px)";
+        // newsLetter.style.pointerEvents = "none";
 
-        footer.style.filter = "blur(3px)";
-        footer.style.pointerEvents = "none";
+        // footer.style.filter = "blur(3px)";
+        // footer.style.pointerEvents = "none";
 
-        hero.style.filter = "blur(3px)";
-        hero.style.pointerEvents = "none";
+        // hero.style.filter = "blur(3px)";
+        // hero.style.pointerEvents = "none";
 
         setTimeout(function () {
             burgerLineTop.style.transform = "translateY(6.6px) rotateZ(45deg)";
