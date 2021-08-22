@@ -1,0 +1,69 @@
+main {
+    position: relative;
+    top: 4rem;
+    min-width: 280px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.hero {
+    height: 15rem;
+    width: 100%;
+    background-image: url("./footer-pics/cashmere-footer.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.questions-hr {
+    height: 1px;
+}
+
+.faqs {
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.question-cont {
+    margin: 3rem 0;
+}
+
+.question-title {
+    margin: 1rem 0;
+}
+
+.questions {
+    
+}
+
+.question {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.answer {
+    margin: 0.5rem 0;
+    padding: 0rem 1rem;
+    max-height: 0;
+    background-color: rgb(238, 238, 238);
+    overflow: hidden;
+    transition: max-height 0.2s ease-in, padding 0.2s ease-in;
+}
+
+.question:hover {
+    color: rgb(124, 19, 19);
+}
+
+@media only screen and (min-width: 960px) {
+    .faqs {
+        width: 60%;
+    }
+}

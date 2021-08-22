@@ -1,0 +1,79 @@
+main {
+    position: relative;
+    top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.hero {
+    background-image: url("./footer-pics/cashmere-footer.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.privacy-policy-cont {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.privacy-hr {
+    margin: 1rem 0;
+}
+
+.privacy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.privacy:hover {
+    color: rgb(105, 18, 18);
+}
+
+.privacy-long {
+    background-color: rgb(218, 218, 218);
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in, padding 0.2s ease-in;
+}
+
+.privacy i {
+    padding: 0.3rem;
+    transition: transform 0.2s ease-in;
+}
+
+.download-privacy {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-privacy a {
+    padding: 1rem 2rem;
+    border: solid 3px rgb(105, 18, 18);
+    text-decoration: none;
+    color: black;
+}
+
+.download-privacy a:hover {
+    background-color: rgb(105, 18, 18);
+    color: white;
+}
+
+@media only screen and (min-width: 960px) {
+    .privacy-policy-cont {
+        width: 60%;
+    }
+}

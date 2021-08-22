@@ -1,0 +1,41 @@
+main {
+    position: relative;
+    top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.hero {
+    height: 15rem;
+    width: 100%;
+    background-image: url("./footer-pics/cashmere-footer.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h3 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 0.7rem;
+}
+
+.about-cont {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about-cont h3 {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 960px) {
+    .about-cont {
+        width: 60%;
+    }
+}
