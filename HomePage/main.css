@@ -50,6 +50,12 @@
     padding: 0.7rem;
     cursor: pointer;
     margin: 1rem 0 2rem 0;
+    text-decoration: none;
+    color: black;
+}
+
+.knitwear a:visited {
+    color: black;
 }
 
 .knitwear a:hover {
@@ -61,6 +67,8 @@
     background-color: hsl(0, 100%, 15.6%);
     color: white;
 }
+
+
 
 .banner1 {
     width: 50%;
