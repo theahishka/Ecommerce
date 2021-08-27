@@ -1,0 +1,262 @@
+main {
+    position: relative;
+    top: 4rem;
+    margin-bottom: 4rem;
+    min-width: 280px;
+}
+
+.breadcrump {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    min-width: 280px;
+}
+
+.breadcrump span {
+    color: rgb(100, 100, 100);
+}
+
+.breadcrump a {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrump a:visited {
+    color: black;
+}
+
+.breadcrump a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+.showcase {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.arrowed-cont {
+    width: 400%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* transform: translateX(-37.5%); */
+    align-items: center;
+    transition: transform 0.4s ease-in;
+}
+
+.arrowed-cont-cont {
+    position: relative;
+    width: 100%;
+}
+
+.arrowed-cont img {
+    width: 25%;
+    height: auto;
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+#showcase-img2 {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+#showcase-img3 {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.arrow-to-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(30%);
+    padding: 5rem 0rem 5rem 1rem;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.arrow-left {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(151, 50, 50);
+    border-left: 1px solid rgb(151, 50, 50);
+    display: block;
+    transform: rotate(45deg);
+}
+
+.arrow-to-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(-30%);
+    padding: 5rem 1rem 5rem 0rem;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.arrow-right {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(151, 50, 50);
+    border-left: 1px solid rgb(151, 50, 50);
+    display: block;
+    transform: rotate(225deg);
+}
+
+.showcase-dots {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: grey;
+    margin: 0 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#showcase-dot1 {
+    background-color: rgb(119, 31, 31);
+}
+
+.product-info {
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    margin: 1rem 0;
+}
+
+.product-info h3 {
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+}
+
+.product-info p {
+    margin: 1rem 0;
+    font-weight: 200;
+}
+
+.product-hr {
+    height: 1px;
+    border: none;
+    background-color: rgb(134, 134, 134);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.color-cont-cont {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.color-cont-cont h4 {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+#color-type {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.color-cont {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.color {
+    min-width: 30px;
+    min-height: 30px;
+    border: 1px solid grey;
+    margin: 0 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.color1 {
+    border: 1px solid rgb(119, 31, 31);
+}
+
+.in-color {
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+}
+
+.size-cont {
+    width: 85%;
+    margin: 1rem auto;
+    display: grid;
+    grid-template: 1fr / 20% 1fr 20%;
+}
+
+.size-cont h4 {
+    font-weight: 400;
+}
+
+.size-cont p {
+    align-self: center;
+    justify-self: center;
+    color: rgb(100, 100, 100);
+}
+
+.size-arrow {
+    height: 10px;
+    width: 10px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    justify-self: flex-end;
+    align-self: center;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.product-details-cont {
+    width: 85%;
+    margin: 1rem auto;
+}
+
+.product-details-visible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-details-arrow {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.care-cont {
+    width: 85%;
+    margin: 1rem auto;
+}
+
+.care-visible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.care-arrow {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

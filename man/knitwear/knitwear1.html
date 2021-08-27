@@ -30,13 +30,21 @@
             rel="stylesheet"
             type="text/css"
         />
-        <link href="./knitwear-product.css" rel="stylesheet" type="text/css" />
+        <link href="../../product.css" rel="stylesheet" type="text/css" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Ubuntu -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
             rel="stylesheet"
         />
 
@@ -56,6 +64,7 @@
         <script src="../../HomePage/footer.js" defer></script>
         <script src="../../HomePage/nav-anime.js" defer></script>
 
+        <script src="../../product.js" defer></script>
         <script src="./knitwear-product.js" defer></script>
 
         <title>Man | Knitwear | Softy</title>
@@ -270,11 +279,105 @@
 
         <main>
             <div class="breadcrump">
-                <p><a href="#">Man</a> > <a href="#">Knitwear</a> > <span>Light Crewneck</span></p>
+                <p>
+                    <a href="#">Man</a> > <a href="#">Knitwear</a> >
+                    <span>Light Crewneck</span>
+                </p>
             </div>
             <section class="showcase">
-                
+                <div class="arrowed-cont-cont">
+                    <span class="arrow-to-left">
+                        <span class="arrow-left"></span>
+                    </span>
+                    <span class="arrow-to-right">
+                        <span class="arrow-right"></span>
+                    </span>
+                    <div class="arrowed-cont">
+                        <img
+                            src="./knitwear1/crewneck1.jpg"
+                            alt="cashmere knitwear"
+                            id="showcase-img1"
+                        />
+                        <img
+                            src="./knitwear1/crewneck2.jpg"
+                            alt="cashmere knitwear"
+                            id="showcase-img2"
+                        />
+                        <img
+                            src="./knitwear1/crewneck3.jpg"
+                            alt="cashmere knitwear"
+                            id="showcase-img3"
+                        />
+                    </div>
+                </div>
+                <div class="showcase-dots">
+                    <div class="showcase-dot" id="showcase-dot1"></div>
+                    <div class="showcase-dot" id="showcase-dot2"></div>
+                    <div class="showcase-dot" id="showcase-dot3"></div>
+                </div>
+                <div class="product-info">
+                    <h3>Light Crewneck</h3>
+                    <p>Cashmere</p>
+                    <p>Made in Turkey</p>
+                    <span class="price">$1000</span>
+                </div>
             </section>
+            <hr class="product-hr" />
+            <section class="color-cont-cont">
+                <h4>Color: <span id="color-type">Yellow Moroccon</span></h4>
+                <div class="color-cont">
+                    <div class="color1 color">
+                        <div
+                            class="in-color1 in-color"
+                            style="background-color: #a17c39"
+                        ></div>
+                    </div>
+                    <div class="color2 color">
+                        <div
+                            class="in-color2 in-color"
+                            style="background-color: #27272f"
+                        ></div>
+                    </div>
+                    <div class="color3 color">
+                        <div
+                            class="in-color3 in-color"
+                            style="background-color: #872517"
+                        ></div>
+                    </div>
+                    <div class="color4 color">
+                        <div
+                            class="in-color4 in-color"
+                            style="background-color: #ccc1bd"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="product-hr" />
+            <section class="size-cont">
+                <h4>Size</h4>
+                <p class="size-p">Select Size</p>
+                <div class="size-arrow"></div>
+            </section>
+            <hr class="product-hr" />
+            <div class="product-details-cont">
+                <div class="product-details-visible">
+                    <p>Product Details</p>
+                    <div class="product-details-arrow">
+
+                    </div>
+                </div>
+            </div>
+            <hr class="product-hr" />
+            <div class="care-cont">
+                <div class="care-visible">
+                    <p>Care & Maintenance</p>
+                    <div class="care-arrow">
+
+                    </div>
+                </div>
+            </div>
+            <hr class="product-hr" />
+
         </main>
 
         <section class="footer">
@@ -311,9 +414,10 @@
                     </div>
                     <hr class="footer-division" />
                     <div class="hidden hidden4">
-                        
                         <a href="../../footer/legal.html">Legal</a>
-                        <a href="../../footer/privacy-policy.html">Privacy Policy</a>
+                        <a href="../../footer/privacy-policy.html"
+                            >Privacy Policy</a
+                        >
                     </div>
                 </div>
 
