@@ -138,3 +138,119 @@ showcaseDotThree.addEventListener("click", function () {
     showcaseDotTwo.style.backgroundColor = "grey";
     showcaseDotThree.style.backgroundColor = "rgb(119, 31, 31)";
 });
+
+// Details Animation
+
+const productDetailsVisible = document.querySelector(
+    ".product-details-visible"
+);
+const careVisible = document.querySelector(".care-visible");
+const shippingVisible = document.querySelector(".shipping-visible");
+const paymentVisible = document.querySelector(".payment-visible");
+
+const productDetailsInvisible = document.querySelector(
+    ".product-details-invisible"
+);
+const careInvisible = document.querySelector(".care-invisible");
+const shippingInvisible = document.querySelector(".shipping-invisible");
+const paymentInvisible = document.querySelector(".payment-invisible");
+
+const productDetailsArrow = document.querySelector(".product-details-arrow");
+const careArrow = document.querySelector(".care-arrow");
+const shippingArrow = document.querySelector(".shipping-arrow");
+const paymentArrow = document.querySelector(".payment-arrow");
+
+let productDetailsOpen = false;
+let careOpen = false;
+let shippingOpen = false;
+let paymentOpen = false;
+
+productDetailsVisible.addEventListener("click", function () {
+    if (productDetailsOpen === false) {
+        productDetailsOpen = true;
+        productDetailsInvisible.style.maxHeight = "200px";
+        productDetailsInvisible.style.margin = "2rem auto 1rem auto";
+        productDetailsArrow.style.transform = "translateX(-20%) rotate(45deg)";
+    } else if (productDetailsOpen === true) {
+        productDetailsOpen = false;
+        productDetailsInvisible.style.maxHeight = "0";
+        productDetailsInvisible.style.margin = "0";
+        productDetailsArrow.style.transform =
+            "translateX(-20%) rotate(-135deg)";
+    }
+});
+
+careVisible.addEventListener("click", function () {
+    if (careOpen === false) {
+        careOpen = true;
+        careInvisible.style.maxHeight = "300px";
+        careInvisible.style.margin = "2rem auto 1rem auto";
+        careArrow.style.transform = "translateX(-20%) rotate(45deg)";
+    } else if (careOpen === true) {
+        careOpen = false;
+        careInvisible.style.maxHeight = "0";
+        careInvisible.style.margin = "0";
+        careArrow.style.transform = "translateX(-20%) rotate(-135deg)";
+    }
+});
+
+shippingVisible.addEventListener("click", function () {
+    if (shippingOpen === false) {
+        shippingOpen = true;
+        shippingInvisible.style.maxHeight = "300px";
+        shippingInvisible.style.margin = "2rem auto 1rem auto";
+        shippingArrow.style.transform = "translateX(-20%) rotate(45deg)";
+    } else if (shippingOpen === true) {
+        shippingOpen = false;
+        shippingInvisible.style.maxHeight = "0";
+        shippingInvisible.style.margin = "0";
+        shippingArrow.style.transform = "translateX(-20%) rotate(-135deg)";
+    }
+});
+
+paymentVisible.addEventListener("click", function () {
+    if (paymentOpen === false) {
+        paymentOpen = true;
+        paymentInvisible.style.maxHeight = "500px";
+        paymentInvisible.style.margin = "2rem auto 1rem auto";
+        paymentArrow.style.transform = "translateX(-20%) rotate(45deg)";
+    } else if (paymentOpen === true) {
+        paymentOpen = false;
+        paymentInvisible.style.maxHeight = "0";
+        paymentInvisible.style.margin = "0";
+        paymentArrow.style.transform = "translateX(-20%) rotate(-135deg)";
+    }
+});
+
+// Size Animation
+
+let sizeContOpen = false;
+
+const sizeCont = document.querySelector(".size-cont");
+const sizeArrow = document.querySelector(".size-arrow");
+const sizeHidden = document.querySelector(".size-hidden");
+const sizeNumberCont = document.querySelectorAll(".size-number-cont");
+
+const sizeP = document.querySelector(".size-p");
+
+sizeCont.addEventListener("click", function () {
+    if (sizeContOpen === false) {
+        sizeContOpen = true;
+        sizeHidden.style.maxHeight = "100px";
+        sizeArrow.style.transform = "rotate(-45deg)";
+    } else if (sizeContOpen === true) {
+        sizeContOpen = false;
+        sizeHidden.style.maxHeight = "0";
+        sizeArrow.style.transform = "rotate(135deg)";
+    }
+});
+
+sizeNumberCont.forEach(element => {
+    element.addEventListener("click", function(e) {
+        sizeNumberCont.forEach(element => {
+            element.style.backgroundColor = "";
+        });
+        e.target.style.backgroundColor = "rgb(220, 220, 220)";
+        sizeP.innerHTML = `${e.srcElement.childNodes[1].innerHTML}`;
+    })
+});
