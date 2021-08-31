@@ -231,6 +231,8 @@ const sizeArrow = document.querySelector(".size-arrow");
 const sizeHidden = document.querySelector(".size-hidden");
 const sizeNumberCont = document.querySelectorAll(".size-number-cont");
 
+const sizeUl = document.querySelector(".size-ul");
+
 const sizeP = document.querySelector(".size-p");
 
 sizeCont.addEventListener("click", function () {
@@ -238,19 +240,65 @@ sizeCont.addEventListener("click", function () {
         sizeContOpen = true;
         sizeHidden.style.maxHeight = "100px";
         sizeArrow.style.transform = "rotate(-45deg)";
+        sizeUl.style.margin = "1rem auto";
     } else if (sizeContOpen === true) {
         sizeContOpen = false;
         sizeHidden.style.maxHeight = "0";
         sizeArrow.style.transform = "rotate(135deg)";
+        sizeUl.style.margin = "0rem auto";
     }
 });
 
-sizeNumberCont.forEach(element => {
-    element.addEventListener("click", function(e) {
-        sizeNumberCont.forEach(element => {
+sizeNumberCont.forEach((element) => {
+    element.addEventListener("click", function (e) {
+        sizeNumberCont.forEach((element) => {
             element.style.backgroundColor = "";
         });
         e.target.style.backgroundColor = "rgb(220, 220, 220)";
         sizeP.innerHTML = `${e.srcElement.childNodes[1].innerHTML}`;
-    })
+    });
 });
+
+// Recommendations Loading
+
+let allManProducts = [];
+
+manKnitwearProducts.forEach((element) => {
+    allManProducts.push(element);
+});
+
+allManProducts.sort(() => Math.random() - 0.5);
+
+function loadRecommendations() {
+    for (let i = 0; i < 8; i++) {
+        const recCont = document.querySelector(".rec-cont");
+
+        const recommendationAnchor = document.createElement("a");
+        recommendationAnchor.classList.add("recommendation");
+        recommendationAnchor.setAttribute("href", `${allManProducts[i].productSrc}`);
+
+        const img = document.createElement("img");
+        img.setAttribute("src", `${allManProducts[i].inSrc}`);
+        img.setAttribute("alt", `${allManProducts[i].title}`);
+
+        const h4 = document.createElement("h4");
+        h4.classList.add("r-title");
+        h4.innerHTML = `${allManProducts[i].title}`;
+
+        const pComp = document.createElement("p");
+        pComp.classList.add("r-title");
+        pComp.innerHTML = `${allManProducts[i].composition}`;
+
+        const pPrice = document.createElement("p");
+        pPrice.classList.add("r-title");
+        pPrice.innerHTML = `${allManProducts[i].price}$`;
+
+        recCont.appendChild(recommendationAnchor);
+        recommendationAnchor.appendChild(img);
+        recommendationAnchor.appendChild(h4);
+        recommendationAnchor.appendChild(pComp);
+        recommendationAnchor.appendChild(pPrice);
+    }
+}
+
+loadRecommendations();

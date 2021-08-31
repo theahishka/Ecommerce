@@ -271,10 +271,11 @@ main {
 
 .size-hidden ul {
     width: 85%;
-    margin: 1rem auto;
+    margin: 0rem auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    transition: margin 0.2s ease-in;
 }
 
 .size-hidden ul li {
@@ -397,16 +398,26 @@ main {
 }
 
 .recommendations {
+    position: relative;
     background-color: #FEFCF0;
-    margin: 1rem 0;
+    margin-bottom: 4rem;
+    top: 4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     min-width: 280px;
 }
 
+.rec-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .recommendation {
     width: 90%;
     margin: 1rem auto;
+    font-family: "Ubuntu", sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 .recommendation img {
@@ -450,4 +461,16 @@ main {
 
 .add-cart-cont p:hover {
     box-shadow: 0px 0px 5px 2px rgb(160, 160, 160);
+}
+
+@media only screen and (min-width: 440px) {
+    .recommendation {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .recommendation {
+        width: 23%;
+    }
 }

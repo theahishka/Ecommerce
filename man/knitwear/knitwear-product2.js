@@ -14,7 +14,7 @@ colorOne.addEventListener("click", function () {
     showcaseImageThree.setAttribute("src", "./knitwear2/black/turtle3.jpg");
 });
 
-colorTwo.addEventListener("click", function() {
+colorTwo.addEventListener("click", function () {
     colorOne.style.border = "1px solid grey";
     colorTwo.style.border = "1px solid rgb(119, 31, 31)";
 
@@ -23,4 +23,4 @@ colorTwo.addEventListener("click", function() {
     showcaseImageOne.setAttribute("src", "./knitwear2/vicuna/turtlev1.jpg");
     showcaseImageTwo.setAttribute("src", "./knitwear2/vicuna/turtlev2.jpg");
     showcaseImageThree.setAttribute("src", "./knitwear2/vicuna/turtlev3.jpg");
-})
+});
