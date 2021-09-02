@@ -259,7 +259,7 @@ sizeNumberCont.forEach((element) => {
     });
 });
 
-// Recommendations Loading
+// Recommendations Loading for man
 
 let allManProducts = [];
 
@@ -301,4 +301,50 @@ function loadRecommendations() {
     }
 }
 
-loadRecommendations();
+// Recommendations Loading for woman
+
+let allWomanProducts = [];
+
+allWomanProducts.sort(() => Math.random() - 0.5);
+
+function loadRecommendationsWoman() {
+    for (let i = 0; i < 8; i++) {
+        const recCont = document.querySelector(".rec-cont");
+
+        const recommendationAnchor = document.createElement("a");
+        recommendationAnchor.classList.add("recommendation");
+        recommendationAnchor.setAttribute("href", `${allWomanProducts[i].productSrc}`);
+
+        const img = document.createElement("img");
+        img.setAttribute("src", `${allWomanProducts[i].inSrc}`);
+        img.setAttribute("alt", `${allWomanProducts[i].title}`);
+
+        const h4 = document.createElement("h4");
+        h4.classList.add("r-title");
+        h4.innerHTML = `${allWomanProducts[i].title}`;
+
+        const pComp = document.createElement("p");
+        pComp.classList.add("r-title");
+        pComp.innerHTML = `${allWomanProducts[i].composition}`;
+
+        const pPrice = document.createElement("p");
+        pPrice.classList.add("r-title");
+        pPrice.innerHTML = `${allWomanProducts[i].price}$`;
+
+        recCont.appendChild(recommendationAnchor);
+        recommendationAnchor.appendChild(img);
+        recommendationAnchor.appendChild(h4);
+        recommendationAnchor.appendChild(pComp);
+        recommendationAnchor.appendChild(pPrice);
+    }
+}
+
+// check for gender
+
+const gender = document.querySelector(".breadcrump").childNodes[1].childNodes[1].innerHTML.toLowerCase();
+
+if (gender === "man") {
+    loadRecommendations();
+} else {
+    loadRecommendationsWoman();
+}

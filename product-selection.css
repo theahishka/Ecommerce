@@ -12,6 +12,8 @@ main {
     top: 4rem;
     min-width: 280px;
     position: relative;
+    z-index: 20;
+    background-color: white;
 }
 
 .breadcrump span {
@@ -85,3 +87,86 @@ main {
     font-weight: 300;
 }
 
+/* filter and sort */
+
+.filter-sort-cont {
+    height: 3rem;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    position: relative;
+    top: 4rem;
+    z-index: 10;
+}
+
+.filter-sort {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-arrow {
+    margin-left: 1rem;
+    transition: transform 0.2s ease-in;
+}
+
+.sort-arrow {
+    margin-left: 1rem;
+    transition: transform 0.2s ease-in;
+}
+
+.hidden-sort {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sort-type {
+    margin: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sort-type:hover {
+    color: rgb(139, 15, 15);
+}
+
+@media only screen and (min-width: 800px) {
+    .product-cont-cont {
+        justify-content: center;
+    }
+
+    .product-cont {
+        width: 22%;
+        margin: 1rem 0.5rem;
+    }
+
+    .hidden-sort {
+        width: 30%;
+        border-left: 1px solid rgb(189, 189, 189);
+    }
+}

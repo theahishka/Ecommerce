@@ -60,7 +60,7 @@
         <script src="../../HomePage/header.js" defer></script>
         <script src="../../HomePage/footer.js" defer></script>
         <script src="../../HomePage/nav-anime.js" defer></script>
-        <script src="../../man-product-selection.js" defer></script>
+        <script src="./knitwear-selection.js" defer></script>
     </head>
     <body>
         <div class="header2">
@@ -274,12 +274,31 @@
         <section class="cart-window"></section>
         <section class="account-window"></section>
         <div class="breadcrump">
-            <p><a href="#">Man</a> > <span>Knitwear</span></p>
+            <p>
+                <a href="#" class="gender">Man</a> >
+                <span class="type-of-product">Knitwear</span>
+            </p>
         </div>
-        <div class="filter-sort"></div>
+        <div class="filter-sort-cont">
+            <div class="filter-sort">
+                <div class="filter">
+                    <span>Filter by</span>
+                    <i class="fas fa-angle-up filter-arrow"></i>
+                </div>
+                <div class="sort">
+                    <span>Sort by</span>
+                    <i class="fas fa-angle-up sort-arrow"></i>
+                </div>
+            </div>
+            <div class="hidden-sort">
+                <p class="sort-type">Sort by Relevance</p>
+                <p class="sort-type">Sort by Increasing Price</p>
+                <p class="sort-type">Sort by Decreasing Price</p>
+            </div>
+        </div>
+
         <main class="main-cont">
             <div class="product-cont-cont"></div>
-            <p class="sort">sort ascending</p>
         </main>
 
         <section class="footer">
