@@ -95,6 +95,7 @@ main {
     position: relative;
     top: 4rem;
     z-index: 10;
+    min-width: 280px;
 }
 
 .filter-sort {
@@ -130,6 +131,95 @@ main {
     margin-left: 1rem;
     transition: transform 0.2s ease-in;
 }
+
+.hidden-filter {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0.5rem;
+}
+
+.visible-color, .visible-material, .visible-size {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1;
+}
+
+.color-arrow-v, .material-arrow-v, .size-arrow-v {
+    transition: transform 0.2s ease-in;
+}
+
+.color-cont, .material-cont, .size-cont {
+    overflow: hidden;
+}
+
+.invisible-color, .invisible-material, .invisible-size {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: max-height 0.2s ease-in;
+}
+
+.filter-choice {
+    display: flex;
+    margin: 0.5rem 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-choice p {
+    pointer-events: none;
+}
+
+
+
+.check-box {
+    border: 1px solid black;
+    height: 15px;
+    width: 15px;
+    margin-right: 0.5rem;
+    pointer-events: none;
+    background-color: white;
+    font-size: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* .filter-choice:hover > .check-box {
+    background-color: rgb(221, 221, 221);
+    color: rgb(221, 221, 221);
+} */
+
+.filter-hr {
+    height: 1px;
+    border: none;
+    background-color: grey;
+    width: 90%;
+    margin: 0rem auto;
+}
+
+/* Hidden Sort Dropdown */
 
 .hidden-sort {
     position: absolute;
@@ -169,4 +259,10 @@ main {
         width: 30%;
         border-left: 1px solid rgb(189, 189, 189);
     }
+
+    .hidden-filter {
+        width: 50%;
+        border-right: 1px solid rgb(189, 189, 189);
+    }
+
 }
