@@ -250,6 +250,12 @@
     background-color: white;
     padding: 0.7rem 2rem;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.shoes a:visited {
+    color: black;
 }
 
 .shoes a:hover {
@@ -559,3 +565,4 @@
         transform: translateY(70px);
     }
 }
+

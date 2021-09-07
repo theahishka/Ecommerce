@@ -270,7 +270,7 @@ manKnitwearProducts.forEach((element) => {
 allManProducts.sort(() => Math.random() - 0.5);
 
 function loadRecommendations() {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
         const recCont = document.querySelector(".rec-cont");
 
         const recommendationAnchor = document.createElement("a");

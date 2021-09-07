@@ -52,6 +52,9 @@ main {
     text-align: center;
     margin: 1rem 0;
     position: relative;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 
 .product-cont img {
@@ -239,6 +242,13 @@ main {
     margin: 1rem 0;
     text-align: center;
     cursor: pointer;
+}
+
+.no-constraint {
+    margin: 1rem auto;
+    text-align: center;
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
 }
 
 .sort-type:hover {
