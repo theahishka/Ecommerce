@@ -100,27 +100,39 @@ sortCont.addEventListener("click", function () {
     }
 });
 
+const sortTypes = document.querySelectorAll(".sort-type");
+
+let sortedProducts = window[loadedPage];
+
 function sortAscending() {
     deleteProducts();
     let newArr = window[loadedPage].slice();
-    let sortedProducts = newArr.sort((a, b) => a.price - b.price);
-    addProducts(sortedProducts);
+    sortedProducts = newArr.sort((a, b) => a.price - b.price);
+    filterThatShit();
 }
 
 function sortDescending() {
     deleteProducts();
     let newArrArr = window[loadedPage].slice();
-    let sortedProductsAgain = newArrArr.sort((a, b) => b.price - a.price);
-    addProducts(sortedProductsAgain);
+    sortedProducts = newArrArr.sort((a, b) => b.price - a.price);
+    filterThatShit();
 }
 
-const sortTypes = document.querySelectorAll(".sort-type");
 sortTypes.forEach((element) => {
     element.addEventListener("click", function (e) {
-        if (e.target.innerHTML === "Sort by Relevance") {
+        sortTypes.forEach((element) => {
+            element.children[0].style.backgroundColor = "white";
+            element.children[0].innerText = "";
+        });
+        element.children[0].style.backgroundColor = "grey";
+        element.children[0].style.color = "grey";
+        if (element.children[1].innerText === "Sort by Relevance") {
             deleteProducts();
-            addProducts(window[loadedPage]);
-        } else if (e.target.innerHTML === "Sort by Increasing Price") {
+            sortedProducts = window[loadedPage];
+            filterThatShit();
+        } else if (
+            element.children[1].innerText === "Sort by Increasing Price"
+        ) {
             sortAscending();
         } else {
             sortDescending();
@@ -229,7 +241,7 @@ let filterConstraints = [];
 function filterThatShit() {
     const productContCont = document.querySelector(".product-cont-cont");
     productContCont.innerHTML = "";
-    let duplicateArray = window[loadedPage].slice();
+    let duplicateArray = sortedProducts;
     if (filterConstraints.length > 0) {
         for (let i = 0; i < filterConstraints.length; i++) {
             duplicateArray = duplicateArray.filter((element) => {
@@ -244,7 +256,7 @@ function filterThatShit() {
         }
     } else {
         deleteProducts();
-        addProducts(window[loadedPage]);
+        addProducts(duplicateArray);
     }
     if (productContCont.innerText === "") {
         const noConstraintP = document.createElement("p");
@@ -254,6 +266,121 @@ function filterThatShit() {
         setTimeout(function () {
             noConstraintP.style.opacity = "1";
         }, 100);
+    }
+}
+
+// Creating and Deleting Filter Tags
+
+let individualTags;
+
+function createTag(event) {
+    const filterTags = document.querySelector(".filter-tags");
+
+    const tag = document.createElement("div");
+    tag.classList.add("tag");
+
+    const choiceItSelf = document.createElement("p");
+    choiceItSelf.innerHTML = `${event.srcElement.children[1].innerHTML}`;
+
+    const closeButton = document.createElement("i");
+    closeButton.classList.add("fas");
+    closeButton.classList.add("fa-times");
+
+    filterTags.appendChild(tag);
+    tag.appendChild(choiceItSelf);
+    tag.appendChild(closeButton);
+
+    const forFilterTwo = document.querySelector(".for-filter2");
+    forFilterTwo.style.transform = "translateY(0)";
+
+    individualTags = document.querySelectorAll(".tag");
+
+    setTimeout(function () {
+        tag.style.transform = "scale(1)";
+    }, 100);
+
+    if (filterConstraints.length === 1) {
+        const clearAll = document.createElement("div");
+        clearAll.classList.add("clear-all");
+
+        const clearAllP = document.createElement("p");
+        clearAllP.innerHTML = "Clear All";
+
+        const clearAllButton = document.createElement("i");
+        clearAllButton.classList.add("fas");
+        clearAllButton.classList.add("fa-times");
+
+        const filterCont = document.querySelector(".filter-cont");
+
+        filterCont.appendChild(clearAll);
+        clearAll.appendChild(clearAllP);
+        clearAll.appendChild(clearAllButton);
+
+        // clicking clearAll button
+        clearAll.addEventListener("click", function (e) {
+            individualTags.forEach((element) => {
+                element.style.transform = "scale(0)";
+
+                setTimeout(function () {
+                    element.remove();
+                }, 250);
+            });
+            clearAll.style.transform = "scale(0)";
+            setTimeout(function () {
+                clearAll.remove();
+                const forFilterTwo = document.querySelector(".for-filter2");
+                forFilterTwo.style.transform = "translateY(calc(-1rem - 1px))";
+            }, 250);
+
+            const filterChoices = document.querySelectorAll(".filter-choice");
+            filterChoices.forEach((element) => {
+                element.children[0].style.backgroundColor = "white";
+                element.children[0].innerHTML = "";
+                element.children[0].style.color = "white";
+            });
+
+            filterConstraints = [];
+            filterThatShit();
+        });
+
+        setTimeout(function () {
+            clearAll.style.transform = "scale(1)";
+        }, 50);
+    }
+    createEventListener();
+}
+
+function deleteTag(event) {
+    individualTags = document.querySelectorAll(".tag");
+    // removing the tag logic
+    for (let i = 0; i < individualTags.length; i++) {
+        if (
+            event.srcElement.children[1].innerHTML ===
+            individualTags[i].children[0].innerText
+        ) {
+            const clearAll = document.querySelector(".clear-all");
+
+            individualTags[i].style.transform = "scale(0)";
+
+            if (individualTags.length === 1) {
+                clearAll.style.transform = "scale(0)";
+            }
+
+            setTimeout(function () {
+                individualTags[i].remove();
+                individualTags = document.querySelectorAll(".tag");
+                // recovering the y axis of for-filter2
+                if (individualTags.length === 0) {
+                    const forFilterTwo = document.querySelector(".for-filter2");
+                    forFilterTwo.style.transform =
+                        "translateY(calc(-1rem - 1px))";
+
+                    clearAll.remove();
+                }
+
+                createEventListener();
+            }, 250);
+        }
     }
 }
 
@@ -274,6 +401,7 @@ filterChoices.forEach((element) => {
             };
             filterConstraints.push(constraint);
             filterThatShit();
+            createTag(e);
         } else {
             e.srcElement.children[0].style.backgroundColor = "white";
             e.srcElement.children[0].innerHTML = "";
@@ -281,12 +409,70 @@ filterChoices.forEach((element) => {
             for (let i = 0; i < filterConstraints.length; i++) {
                 if (
                     filterConstraints[i].choice ===
-                    `${e.srcElement.children[1].innerHTML}`
+                    e.srcElement.children[1].innerHTML
                 ) {
                     filterConstraints.splice(i, 1);
                 }
             }
+            individualTags = document.querySelectorAll(".tag");
             filterThatShit();
+            deleteTag(e);
         }
     });
 });
+
+// clicking tags and deleting them, plus filtering that shit
+
+function createEventListener() {
+    individualTags = document.querySelectorAll(".tag");
+
+    individualTags.forEach((element) => {
+        element.addEventListener("click", function (e) {
+            const filterChoices = document.querySelectorAll(".filter-choice");
+            for (let i = 0; i < filterChoices.length; i++) {
+                if (
+                    filterChoices[i].children[1].innerText ===
+                    element.children[0].innerText
+                ) {
+                    filterChoices[i].children[0].style.backgroundColor =
+                        "white";
+                    filterChoices[i].children[0].innerHTML = "";
+                    filterChoices[i].children[0].style.color = "white";
+
+                    element.style.transform = "scale(0)";
+
+                    const clearAll = document.querySelector(".clear-all");
+                    if (individualTags.length === 1) {
+                        clearAll.style.transform = "scale(0)";
+                    }
+                    // element.remove();
+                    setTimeout(function () {
+                        element.remove();
+                        individualTags = document.querySelectorAll(".tag");
+
+                        // recovering the y axis of for-filter2
+                        if (individualTags.length === 0) {
+                            const forFilterTwo =
+                                document.querySelector(".for-filter2");
+                            forFilterTwo.style.transform =
+                                "translateY(calc(-1rem - 1px))";
+
+                            clearAll.remove();
+                        }
+                    }, 250);
+
+                    // updating filterConstraints and filteringThatShit
+                    for (let a = 0; a < filterConstraints.length; a++) {
+                        if (
+                            filterConstraints[a].choice ===
+                            filterChoices[i].children[1].innerText
+                        ) {
+                            filterConstraints.splice(a, 1);
+                        }
+                    }
+                    filterThatShit();
+                }
+            }
+        });
+    });
+}

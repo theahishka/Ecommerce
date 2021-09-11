@@ -94,11 +94,67 @@ main {
 
 .filter-sort-cont {
     height: 3rem;
-    border-bottom: 1px solid rgb(189, 189, 189);
     position: relative;
     top: 4rem;
     z-index: 10;
     min-width: 280px;
+}
+
+.for-filter {
+    position: relative;
+    top: 4rem;
+    height: 1px;
+    border: none;
+    background-color: rgb(189, 189, 189);
+}
+
+.for-filter1 {
+    z-index: 20;
+}
+
+.for-filter2 {
+    transform: translateY(calc(-1rem - 1px));
+}
+
+.filter-tags {
+    position: relative;
+    top: 4rem;
+    width: 90%;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    padding-left: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    margin: 0.5rem 0.5rem;
+    transition: transform 0.2s ease-in;
+    transform: scale(0);
+}
+
+.tag p {
+    font-size: 1rem;
+    font-weight: 200;
+    pointer-events: none;
+}
+
+.tag i {
+    margin-left: 0.5rem;
+    color: black;
+    background-color: rgb(235, 235, 235);
+    padding: 0.5rem 0.65rem;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.tag:hover > i {
+    background-color: rgb(189, 189, 189);
 }
 
 .filter-sort {
@@ -111,6 +167,10 @@ main {
     overflow: hidden;
     background-color: white;
     
+}
+
+.filter-cont {
+    display: flex;
 }
 
 .filter {
@@ -126,9 +186,42 @@ main {
 }
 
 .filter-arrow {
-    margin-left: 1rem;
+    margin: 0 1rem;
     transition: transform 0.2s ease-in;
 }
+
+.clear-all {
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    padding-left: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    margin: 0.5rem 0.5rem;
+    transition: transform 0.2s ease-in;
+    transform: scale(0);
+}
+
+.clear-all p {
+    font-size: 1rem;
+    font-weight: 200;
+    pointer-events: none;
+}
+
+.clear-all i {
+    margin-left: 0.5rem;
+    color: black;
+    background-color: rgb(235, 235, 235);
+    padding: 0.5rem 0.65rem;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.clear-all:hover > i {
+    background-color: rgb(189, 189, 189);
+}
+
 
 .sort-arrow {
     margin-left: 1rem;
@@ -242,6 +335,13 @@ main {
     margin: 1rem 0;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-type p {
+    pointer-events: none;
 }
 
 .no-constraint {

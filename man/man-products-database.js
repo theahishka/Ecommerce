@@ -52,7 +52,7 @@ window.manKnitwearProducts = [
     {
         title: "Polo Shirt",
         composition: ["Linen", "Silk", "Cashmere"],
-        price: 1000,
+        price: 2000,
         productSrc: "../../man/knitwear/knitwear6.html",
         outSrc: "./knitwear6/earlyGrey/earl1.jpg",
         inSrc: "./knitwear6/earlyGrey/earl2.jpg",
@@ -62,7 +62,7 @@ window.manKnitwearProducts = [
     {
         title: "Cardigan",
         composition: ["Cashmere"],
-        price: 2000,
+        price: 1000,
         productSrc: "../../man/knitwear/knitwear7.html",
         outSrc: "./knitwear7/almondineC1.jpg",
         inSrc: "./knitwear7/almondineC2.jpg",
