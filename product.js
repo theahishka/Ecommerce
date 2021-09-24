@@ -267,6 +267,22 @@ manKnitwearProducts.forEach((element) => {
     allManProducts.push(element);
 });
 
+manCoatsProducts.forEach((element) => {
+    allManProducts.push(element);
+});
+
+manShirtsProducts.forEach((element) => {
+    allManProducts.push(element);
+});
+
+manAccessoriesProducts.forEach((element) => {
+    allManProducts.push(element);
+});
+
+manShoesProducts.forEach((element) => {
+    allManProducts.push(element);
+});
+
 allManProducts.sort(() => Math.random() - 0.5);
 
 function loadRecommendations() {
@@ -275,7 +291,10 @@ function loadRecommendations() {
 
         const recommendationAnchor = document.createElement("a");
         recommendationAnchor.classList.add("recommendation");
-        recommendationAnchor.setAttribute("href", `${allManProducts[i].productSrc}`);
+        recommendationAnchor.setAttribute(
+            "href",
+            `${allManProducts[i].productSrc}`
+        );
 
         const img = document.createElement("img");
         img.setAttribute("src", `${allManProducts[i].inSrc}`);
@@ -308,12 +327,15 @@ let allWomanProducts = [];
 allWomanProducts.sort(() => Math.random() - 0.5);
 
 function loadRecommendationsWoman() {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
         const recCont = document.querySelector(".rec-cont");
 
         const recommendationAnchor = document.createElement("a");
         recommendationAnchor.classList.add("recommendation");
-        recommendationAnchor.setAttribute("href", `${allWomanProducts[i].productSrc}`);
+        recommendationAnchor.setAttribute(
+            "href",
+            `${allWomanProducts[i].productSrc}`
+        );
 
         const img = document.createElement("img");
         img.setAttribute("src", `${allWomanProducts[i].inSrc}`);
@@ -339,12 +361,46 @@ function loadRecommendationsWoman() {
     }
 }
 
-// check for gender
+// Get the needed elements for initial product info load
 
-const gender = document.querySelector(".breadcrump").childNodes[1].childNodes[1].innerHTML.toLowerCase();
+const gender = document
+    .querySelector(".breadcrump")
+    .childNodes[1].childNodes[1].innerHTML.toLowerCase();
+const productType =
+    document.querySelector(".breadcrump").childNodes[1].children[1].innerHTML;
+const productName =
+    document.querySelector(".breadcrump").childNodes[1].children[2].innerHTML;
+
+const productInfoTitle = document.getElementById("product-info-title");
+const productInfoComposition = document.getElementById(
+    "product-info-composition"
+);
+const productInfoPrice = document.querySelector(".price");
+
+console.log(productType);
+console.log(productName);
+
+// check for gender
 
 if (gender === "man") {
     loadRecommendations();
 } else {
     loadRecommendationsWoman();
 }
+
+// Load product info and pics
+
+function loadInitialProductInfo() {
+    let pagesProduct = `${gender}${productType}Products`;
+
+    window[pagesProduct].forEach((element) => {
+        if (element.title === productName) {
+            productInfoTitle.innerHTML = `${element.title}`;
+            let loadedComposition = element.composition.join(", ");
+            productInfoComposition.innerHTML = `${loadedComposition}`;
+            productInfoPrice.innerHTML = `$${element.price}`
+        }
+    });
+}
+
+loadInitialProductInfo();

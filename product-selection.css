@@ -2,6 +2,7 @@ main {
     position: relative;
     top: 4rem;
     margin-bottom: 4rem;
+    min-width: 280px;
 }
 
 .breadcrump {
@@ -97,7 +98,7 @@ main {
     position: relative;
     top: 4rem;
     z-index: 10;
-    min-width: 280px;
+    min-width: 320px;
 }
 
 .for-filter {
@@ -113,7 +114,7 @@ main {
 }
 
 .for-filter2 {
-    transform: translateY(calc(-1rem - 1px));
+    display: none;
 }
 
 .filter-tags {
@@ -282,6 +283,10 @@ main {
     cursor: pointer;
 }
 
+.filter-choice:hover {
+    color: rgb(139, 15, 15);
+}
+
 .filter-choice p {
     pointer-events: none;
 }
@@ -375,4 +380,38 @@ main {
         border-right: 1px solid rgb(189, 189, 189);
     }
 
+}
+
+@media only screen and (max-width: 400px) {
+    .clear-all {
+        font-size: 0.74rem;
+    }
+
+    .clear-all p {
+        font-size: 0.74rem;
+    }
+
+    .tag p {
+        font-size: 0.74rem;
+    }
+
+    .dropdown-title {
+        font-size: 0.74rem;
+    }
+
+    .filter-choice {
+        font-size: 0.74rem;
+    }
+
+    .visibles {
+        font-size: 0.74rem;
+    }
+
+    .product-cont {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 0.8rem;
+    }
 }

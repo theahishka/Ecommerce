@@ -195,7 +195,7 @@ const sizeArrowV = document.querySelector(".size-arrow-v");
 visibleColor.addEventListener("click", function () {
     if (invisibleColorOpen === false) {
         invisibleColorOpen = true;
-        invisibleColor.style.maxHeight = "200px";
+        invisibleColor.style.maxHeight = "300px";
         invisibleColor.style.pointerEvents = "auto";
         colorArrowV.style.transform = "rotate(180deg)";
     } else {
@@ -291,7 +291,7 @@ function createTag(event) {
     tag.appendChild(closeButton);
 
     const forFilterTwo = document.querySelector(".for-filter2");
-    forFilterTwo.style.transform = "translateY(0)";
+    forFilterTwo.style.display = "block";
 
     individualTags = document.querySelectorAll(".tag");
 
@@ -304,7 +304,7 @@ function createTag(event) {
         clearAll.classList.add("clear-all");
 
         const clearAllP = document.createElement("p");
-        clearAllP.innerHTML = "Clear All";
+        clearAllP.innerHTML = "Clear";
 
         const clearAllButton = document.createElement("i");
         clearAllButton.classList.add("fas");
@@ -329,7 +329,7 @@ function createTag(event) {
             setTimeout(function () {
                 clearAll.remove();
                 const forFilterTwo = document.querySelector(".for-filter2");
-                forFilterTwo.style.transform = "translateY(calc(-1rem - 1px))";
+                forFilterTwo.style.display = "none";
             }, 250);
 
             const filterChoices = document.querySelectorAll(".filter-choice");
@@ -372,8 +372,7 @@ function deleteTag(event) {
                 // recovering the y axis of for-filter2
                 if (individualTags.length === 0) {
                     const forFilterTwo = document.querySelector(".for-filter2");
-                    forFilterTwo.style.transform =
-                        "translateY(calc(-1rem - 1px))";
+                    forFilterTwo.style.display = "none";
 
                     clearAll.remove();
                 }
@@ -454,8 +453,7 @@ function createEventListener() {
                         if (individualTags.length === 0) {
                             const forFilterTwo =
                                 document.querySelector(".for-filter2");
-                            forFilterTwo.style.transform =
-                                "translateY(calc(-1rem - 1px))";
+                                forFilterTwo.style.display = "none";
 
                             clearAll.remove();
                         }
