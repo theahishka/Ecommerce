@@ -71,6 +71,9 @@
         <title>Man | Knitwear | Softy</title>
     </head>
     <body>
+        <div class="successful-popup">
+            <h1>Item Added Into Cart</h1>
+        </div>
         <div class="header2">
             <div class="burger">
                 <div class="line line1"></div>
@@ -81,8 +84,9 @@
             </div>
             <div class="nav-btns2">
                 <a href=""
-                    ><i id="cart-phone" class="fas fa-shopping-cart"></i
-                ></a>
+                    ><i id="cart-phone" class="fas fa-shopping-cart"></i>
+                    <div class="shopping-sub"></div>
+                </a>
                 <a href=""
                     ><i id="account-user-phone" class="fas fa-user"></i
                 ></a>
@@ -101,7 +105,11 @@
                         <a class="menu-pc-choice" href=""><p>Man</p></a>
                     </div>
                     <div class="man-slide menu-slide">
-                        <a class="menu-pc-choice" href="./knitwear-selection.html"><p>Knitwear</p></a>
+                        <a
+                            class="menu-pc-choice"
+                            href="./knitwear-selection.html"
+                            ><p>Knitwear</p></a
+                        >
                         <a class="menu-pc-choice" href=""><p>Coats</p></a>
                         <a class="menu-pc-choice" href=""><p>Shirts</p></a>
                         <a class="menu-pc-choice" href=""><p>Accessories</p></a>
@@ -128,7 +136,9 @@
                     <input id="search-box" type="text" placeholder="Search" />
                 </div>
                 <div class="cart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart">
+                        <div class="shopping-sub"></div>
+                    </i>
                 </div>
                 <div class="account">
                     <i class="fas fa-user"></i>
@@ -279,7 +289,8 @@
         <section class="account-window"></section>
         <div class="breadcrump">
             <p>
-                <a href="#">Man</a> > <a href="./knitwear-selection.html">Knitwear</a> >
+                <a href="#">Man</a> >
+                <a href="./knitwear-selection.html">Knitwear</a> >
                 <span>Thick Turtleneck</span>
             </p>
         </div>
@@ -315,7 +326,6 @@
                     <div class="showcase-dot" id="showcase-dot2"></div>
                     <div class="showcase-dot" id="showcase-dot3"></div>
                 </div>
-                
             </section>
 
             <div class="sub-main">
@@ -381,7 +391,7 @@
                 </section>
                 <hr class="product-hr" />
                 <div class="add-cart-cont">
-                    <p>ADD TO SHOPPING BAG</p>
+                    <p id="add-to-cart">ADD TO SHOPPING BAG</p>
                 </div>
                 <p class="product-paragraph">
                     Turtleneck in vicuña, the finest, rarest animal fibre in the
@@ -395,9 +405,7 @@
                         <div class="product-details-arrow"></div>
                     </div>
                     <div class="product-details-invisible invisible-section">
-                        <p class="invisible-detail">
-                            Composition: 100% Vicuna
-                        </p>
+                        <p class="invisible-detail">Composition: 100% Vicuna</p>
                     </div>
                 </div>
                 <hr class="product-hr" />
@@ -465,14 +473,11 @@
                     </div>
                 </div>
                 <hr class="product-hr" />
-                
             </div>
         </main>
         <section class="recommendations">
             <h4 class="recommendations-title">Our Recommendations</h4>
-            <div class="rec-cont">
-                
-            </div>
+            <div class="rec-cont"></div>
         </section>
 
         <section class="footer">

@@ -3,6 +3,107 @@ const typeOfProduct = document.querySelector(".type-of-product").innerHTML;
 
 let loadedPage = `${gender}${typeOfProduct}Products`;
 
+// loading filter choices based on the database
+
+// Invisible divs
+const invisibleColor = document.querySelector(".invisible-color");
+const invisibleMaterial = document.querySelector(".invisible-material");
+const invisibleSize = document.querySelector(".invisible-size");
+
+function loadFilterChoices() {
+    // colors filter
+    let allColors = [];
+    let deletingColors = [];
+    window[loadedPage].forEach((element, index, array) => {
+        for (let i = 0; i < element.color.length; i++) {
+            allColors.push(element.color[i]);
+        }
+    });
+    allColors.forEach((element, index, array) => {
+        for (let i = index + 1; i < array.length; i++) {
+            if (element === array[i]) {
+                return deletingColors.push(element);
+            }
+        }
+    });
+    deletingColors.forEach((element) => {
+        for (let i = 0; allColors.length; i++) {
+            if (element === allColors[i]) {
+                return allColors.splice(i, 1);
+            }
+        }
+    });
+    allColors.forEach((element) => {
+        const filterChoiceDiv = document.createElement("div");
+        filterChoiceDiv.classList.add("filter-choice");
+
+        const checkBoxDiv = document.createElement("div");
+        checkBoxDiv.classList.add("check-box");
+
+        const filterChoiceP = document.createElement("p");
+        filterChoiceP.innerHTML = `${element}`;
+
+        invisibleColor.appendChild(filterChoiceDiv);
+        filterChoiceDiv.appendChild(checkBoxDiv);
+        filterChoiceDiv.appendChild(filterChoiceP);
+    });
+
+    // compositions filter
+    let allCompositions = [];
+    let deletingCompositions = [];
+    window[loadedPage].forEach((element, index, array) => {
+        for (let i = 0; i < element.composition.length; i++) {
+            allCompositions.push(element.composition[i]);
+        }
+    });
+    allCompositions.forEach((element, index, array) => {
+        for (let i = index + 1; i < array.length; i++) {
+            if (element === array[i]) {
+                return deletingCompositions.push(element);
+            }
+        }
+    });
+    deletingCompositions.forEach((element) => {
+        for (let i = 0; allCompositions.length; i++) {
+            if (element === allCompositions[i]) {
+                return allCompositions.splice(i, 1);
+            }
+        }
+    });
+    allCompositions.forEach((element) => {
+        const filterChoiceDiv = document.createElement("div");
+        filterChoiceDiv.classList.add("filter-choice");
+
+        const checkBoxDiv = document.createElement("div");
+        checkBoxDiv.classList.add("check-box");
+
+        const filterChoiceP = document.createElement("p");
+        filterChoiceP.innerHTML = `${element}`;
+
+        invisibleMaterial.appendChild(filterChoiceDiv);
+        filterChoiceDiv.appendChild(checkBoxDiv);
+        filterChoiceDiv.appendChild(filterChoiceP);
+    });
+
+    // sizes filter
+    window[loadedPage][0].size.forEach(element => {
+        const filterChoiceDiv = document.createElement("div");
+        filterChoiceDiv.classList.add("filter-choice");
+
+        const checkBoxDiv = document.createElement("div");
+        checkBoxDiv.classList.add("check-box");
+
+        const filterChoiceP = document.createElement("p");
+        filterChoiceP.innerHTML = `${element}`;
+
+        invisibleSize.appendChild(filterChoiceDiv);
+        filterChoiceDiv.appendChild(checkBoxDiv);
+        filterChoiceDiv.appendChild(filterChoiceP);
+    })
+}
+
+loadFilterChoices();
+
 // add and delete products functions
 
 function addProducts(arr) {
@@ -181,11 +282,6 @@ let invisibleSizeOpen = false;
 const visibleColor = document.querySelector(".visible-color");
 const visibleMaterial = document.querySelector(".visible-material");
 const visibleSize = document.querySelector(".visible-size");
-
-// Invisible divs
-const invisibleColor = document.querySelector(".invisible-color");
-const invisibleMaterial = document.querySelector(".invisible-material");
-const invisibleSize = document.querySelector(".invisible-size");
 
 // visible arrows
 const colorArrowV = document.querySelector(".color-arrow-v");
@@ -453,7 +549,7 @@ function createEventListener() {
                         if (individualTags.length === 0) {
                             const forFilterTwo =
                                 document.querySelector(".for-filter2");
-                                forFilterTwo.style.display = "none";
+                            forFilterTwo.style.display = "none";
 
                             clearAll.remove();
                         }
@@ -474,3 +570,5 @@ function createEventListener() {
         });
     });
 }
+
+

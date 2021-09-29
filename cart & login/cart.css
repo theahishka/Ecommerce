@@ -1,0 +1,246 @@
+main {
+    background-color: rgb(212, 212, 212);
+    min-width: 280px;
+    padding: 1rem 0;
+}
+
+.empty-bitch {
+    height: 4rem;
+    width: 100%;
+}
+
+.page-title{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0rem auto 0rem auto;
+    background-color: white;
+}
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.back-arrow:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.back-arrow p {
+    display: none;
+}
+
+.title h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+.balancing-div {
+    height: 1rem;
+    width: 30px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width: 400px){
+    .back-arrow p {
+        display: block;
+    }
+
+    .back-arrow i {
+        margin-right: 1rem;
+    }
+
+    .balancing-div {
+        width: 85px;
+    }
+}
+
+.items-cont {
+    background-color: white;
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.pic-info {
+    display: flex;
+}
+
+.pic {
+    width: 37%;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 64%;
+}
+
+.info p {
+    font-size: 0.8rem;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+}
+
+.quantity-cont {
+    transform: translateY(-15%);
+}
+
+.quantity-cont hr {
+    height: 1px;
+    border: none;
+    background-color: grey;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity i {
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.quantity p {
+    margin: 0rem 0.5rem;
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-cont p {
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.item-division {
+    height: 1px;
+    border: none;
+    background-color: grey;
+    margin-bottom: 1rem;
+}
+
+.order-cont {
+    background-color: white;
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+}
+
+.order-cont h3 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.order-cont hr {
+    height: 1px;
+    border: none;
+    background-color: grey;
+    margin: 0.5rem 0;
+}
+
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.text span {
+    font-size: 0.7rem;
+}
+
+.amount {
+    text-align: right;
+}
+
+.amount span {
+    font-size: 0.7rem;
+}
+
+.payment-methods {
+    margin: 1rem auto;
+}
+
+.checkout {
+    width: 80%;
+    height: 3rem;
+    background-color: hsl(0, 63%, 37%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.paypal {
+    width: 80%;
+    height: 3rem;
+    background-color: white;
+    margin: 1rem auto 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 350px) {
+    .product-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .product-info p {
+        font-size: 0.7rem;
+    }
+
+    .remove-cont p {
+        font-size: 0.7rem;
+    }
+
+    .order-cont h3 {
+        font-size: 0.8rem;
+    }
+
+    .text p {
+        font-size: 0.7rem;
+    }
+
+    .text span {
+        font-size: 0.5rem;
+    }
+
+    .amount p {
+        font-size: 0.7rem;
+    }
+
+    .amount span {
+        font-size: 0.5rem;
+    }
+
+    
+}

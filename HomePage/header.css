@@ -128,6 +128,11 @@ nav li:hover {
     align-items: center;
     justify-content: center;
     transition: opacity 0.15s ease-in;
+    color: black;
+}
+
+.cart:visited {
+    color: black;
 }
 
 .account {
@@ -345,4 +350,23 @@ nav li:hover {
     .header2 {
         grid-template: 1fr / 30% 1fr 30% ;
     }
+}
+
+.fa-shopping-cart {
+    position: relative;
+}
+
+.shopping-sub {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(134, 35, 35);
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    transform: translateY(-70%) translateX(-10%);
+    color: white;
+    font-size: 0.7rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }

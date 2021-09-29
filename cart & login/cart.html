@@ -22,14 +22,21 @@
             rel="stylesheet"
             type="text/css"
         />
+        <link href="./cart.css" rel="stylesheet" type="text/css" />
 
-        <link href="./aboutUs.css" rel="stylesheet" type="text/css" />
-
-        <!-- Poppins -->
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Ubuntu -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
             rel="stylesheet"
         />
 
@@ -39,6 +46,7 @@
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
             crossorigin="anonymous"
         />
+
         <script
             defer
             src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
@@ -48,7 +56,10 @@
         <script src="../HomePage/footer.js" defer></script>
         <script src="../HomePage/nav-anime.js" defer></script>
 
-        <title>About Us | Softy</title>
+        <script src="../man/man-products-database.js" defer></script>
+        <script src="../cart & login/cart.js" defer></script>
+
+        <title>Shopping Cart | Softy</title>
     </head>
     <body>
         <div class="header2">
@@ -60,9 +71,9 @@
                 <a href="../index.html">Softy</a>
             </div>
             <div class="nav-btns2">
-                <a href=""
+                <a href="./cart.html"
                     ><i id="cart-phone" class="fas fa-shopping-cart">
-                        <div class="shopping-sub"></div></i
+                        <div class="shopping-sub"></div> </i
                 ></a>
                 <a href=""
                     ><i id="account-user-phone" class="fas fa-user"></i
@@ -82,7 +93,11 @@
                         <a class="menu-pc-choice" href=""><p>Man</p></a>
                     </div>
                     <div class="man-slide menu-slide">
-                        <a class="menu-pc-choice" href=""><p>Knitwear</p></a>
+                        <a
+                            class="menu-pc-choice"
+                            href="../man/knitwear/knitwear-selection.html"
+                            ><p>Knitwear</p></a
+                        >
                         <a class="menu-pc-choice" href=""><p>Coats</p></a>
                         <a class="menu-pc-choice" href=""><p>Shirts</p></a>
                         <a class="menu-pc-choice" href=""><p>Accessories</p></a>
@@ -108,11 +123,11 @@
                     <i id="lupa" class="fas fa-search"></i>
                     <input id="search-box" type="text" placeholder="Search" />
                 </div>
-                <div class="cart">
+                <a href="./cart.html" class="cart">
                     <i class="fas fa-shopping-cart">
                         <div class="shopping-sub"></div>
                     </i>
-                </div>
+                </a>
                 <div class="account">
                     <i class="fas fa-user"></i>
                 </div>
@@ -168,11 +183,11 @@
                         <div class="sub-menu-choices">
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Man</p>
+                                <a>Man</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Woman</p>
+                                <a>Woman</a>
                             </div>
                             <hr class="menu-division" />
                         </div>
@@ -186,23 +201,26 @@
                         <div class="sub-menu-choices">
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Knitwear</p>
+                                <a
+                                    href="../man/knitwear/knitwear-selection.html"
+                                    >Knitwear</a
+                                >
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Coats</p>
+                                <a>Coats</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Shirts</p>
+                                <a>Shirts</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Accessories</p>
+                                <a>Accessories</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Shoes</p>
+                                <a>Shoes</a>
                             </div>
                             <hr class="menu-division" />
                         </div>
@@ -215,23 +233,23 @@
                         <div class="sub-menu-choices">
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Knitwear</p>
+                                <a>Knitwear</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Coats</p>
+                                <a>Coats</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Dresses</p>
+                                <a>Dresses</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Accessories</p>
+                                <a>Accessories</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Shoes</p>
+                                <a>Shoes</a>
                             </div>
                             <hr class="menu-division" />
                         </div>
@@ -244,11 +262,11 @@
                         <div class="sub-menu-choices">
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Man</p>
+                                <a>Man</a>
                             </div>
                             <hr class="menu-division" />
                             <div class="sub-choice">
-                                <p>Woman</p>
+                                <a>Woman</a>
                             </div>
                             <hr class="menu-division" />
                         </div>
@@ -262,24 +280,101 @@
         <section class="account-window"></section>
 
         <main>
-            <div class="hero">
-                <h3>About Us</h3>
+            <div class="empty-bitch"></div>
+            <div class="page-title">
+                <div class="back-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                    <p>Back</p>
+                </div>
+                <div class="title">
+                    <h3>Shopping Cart</h3>
+                </div>
+                <div class="balancing-div">
+
+                </div>
             </div>
-            <div class="about-cont">
-                <h3>Best Quality Cashmere and Fabrics</h3>
-                <p>
-                    We specialized in a self made fabrics like cashmere, cotton
-                    and silk. We have our own fabrics production facilities that
-                    was developed through out the years of experience, only to
-                    deliver fine quality clothing products for you, our
-                    customer.
-                    <br />
-                    <br />
-                    We are customer centric company, so feel free to ask for any
-                    support needed at support@softy.com or visit our Contact Us
-                    page for more contact details.
-                </p>
-            </div>
+
+            <section class="items-cont">
+                <div class="item">
+                    <div class="pic-info">
+                        <div class="pic">
+                            <img src="../pics/shoes1.jpg">
+                        </div>
+                        <div class="info">
+                            <div class="product-info">
+                                <h3 class="item-title">Mendel Crew Neck</h3>
+                                <p class="item-price">$2000</p>
+                                <p>Color: <span class="item-color">Yellow Moroccan</span></p>
+                                <p>Size: <span class="item-size">48</span></p>
+                            </div>
+                            <div class="quantity-cont">
+                                <hr>
+                                <div class="quantity">
+                                    <i class="fas fa-minus"></i>
+                                    <p>1</p>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remove-cont">
+                        <p>Remove</p>
+
+                    </div>
+                    <hr class="item-division">
+                </div>
+                <div class="item">
+                    <div class="pic-info">
+                        <div class="pic">
+                            <img src="../pics/shoes1.jpg">
+                        </div>
+                        <div class="info">
+                            <div class="product-info">
+                                <h3 class="item-title">Mendel Crew Neck</h3>
+                                <p class="item-price">$2000</p>
+                                <p>Color: <span class="item-color">Yellow Moroccan</span></p>
+                                <p>Size: <span class="item-size">48</span></p>
+                            </div>
+                            <div class="quantity-cont">
+                                <hr>
+                                <div class="quantity">
+                                    <i class="fas fa-minus"></i>
+                                    <p>1</p>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remove-cont">
+                        <p>Remove</p>
+                    </div>
+                </div>
+                <hr class="item-division">
+            </section>
+            <section class="order-cont">
+                <h3>Order Total</h3>
+                <hr>
+                <div class="sub-total">
+                    <div class="text">
+                        <p>Subtotal</p>
+                        <span>*Taxes Included</span>
+                    </div>
+                    <div class="amount">
+                        <p>$2000</p>
+                        <span>Free Standard Delivery</span>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <div class="checkout">
+                        CHECKOUT
+                    </div>
+                    <div class="paypal">
+                        PAYPAL
+                    </div>
+                </div>
+            </section>
         </main>
 
         <section class="footer">
@@ -291,8 +386,8 @@
                     </div>
                     <hr class="footer-division" />
                     <div class="hidden hidden2">
-                        <a href="./contactUs.html">Contacts</a>
-                        <a href="./aboutUs.html">About Us</a>
+                        <a href="../footer/contactUs.html">Contacts</a>
+                        <a href="../footer/aboutUs.html">About Us</a>
                     </div>
                 </div>
 
@@ -303,9 +398,9 @@
                     </div>
                     <hr class="footer-division" />
                     <div class="hidden hidden3">
-                        <a href="./faq.html">Returns & Exchanges</a>
-                        <a href="./faq.html">Delivery & Shipping</a>
-                        <a href="./faq.html">FAQ</a>
+                        <a href="../footer/faq.html">Returns & Exchanges</a>
+                        <a href="../footer/faq.html">Delivery & Shipping</a>
+                        <a href="../footer/faq.html">FAQ</a>
                     </div>
                 </div>
 
@@ -316,8 +411,10 @@
                     </div>
                     <hr class="footer-division" />
                     <div class="hidden hidden4">
-                        <a href="./legal.html">Legal</a>
-                        <a href="./privacy-policy.html">Privacy Policy</a>
+                        <a href="../footer/legal.html">Legal</a>
+                        <a href="../footer/privacy-policy.html"
+                            >Privacy Policy</a
+                        >
                     </div>
                 </div>
 

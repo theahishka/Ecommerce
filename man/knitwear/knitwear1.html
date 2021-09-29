@@ -64,6 +64,7 @@
         <script src="../../HomePage/footer.js" defer></script>
         <script src="../../HomePage/nav-anime.js" defer></script>
 
+        <script src="./knitwear-product1.js" defer></script>
         <script src="../man-products-database.js" defer></script>
         <script src="../../product.js" defer></script>
         
@@ -71,6 +72,9 @@
         <title>Man | Knitwear | Softy</title>
     </head>
     <body>
+        <div class="successful-popup">
+            <h1>Item Added Into Cart</h1>
+        </div>
         <div class="header2">
             <div class="burger">
                 <div class="line line1"></div>
@@ -80,9 +84,9 @@
                 <a href="../../index.html">Softy</a>
             </div>
             <div class="nav-btns2">
-                <a href=""
-                    ><i id="cart-phone" class="fas fa-shopping-cart"></i
-                ></a>
+                <a href="../../cart & login/cart.html"><i id="cart-phone" class="fas fa-shopping-cart">
+                    <div class="shopping-sub"></div>
+                </i></a>
                 <a href=""
                     ><i id="account-user-phone" class="fas fa-user"></i
                 ></a>
@@ -131,9 +135,11 @@
                     <i id="lupa" class="fas fa-search"></i>
                     <input id="search-box" type="text" placeholder="Search" />
                 </div>
-                <div class="cart">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
+                <a href="../../cart & login/cart.html" class="cart">
+                    <i class="fas fa-shopping-cart">
+                        <div class="shopping-sub"></div>
+                    </i>
+                </a>
                 <div class="account">
                     <i class="fas fa-user"></i>
                 </div>
@@ -396,7 +402,7 @@
                 </section>
                 <hr class="product-hr" />
                 <div class="add-cart-cont">
-                    <p>ADD TO SHOPPING BAG</p>
+                    <p id="add-to-cart">ADD TO SHOPPING BAG</p>
                 </div>
                 <p class="product-paragraph">
                     Crewneck in downy baby cashmere yarn, garment dyed and
@@ -485,6 +491,9 @@
             </div>
             
         </main>
+
+        
+
         <section class="recommendations">
             <h4 class="recommendations-title">Our Recommendations</h4>
             <div class="rec-cont">

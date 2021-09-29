@@ -70,6 +70,9 @@
         <title>Man | Knitwear | Softy</title>
     </head>
     <body>
+        <div class="successful-popup">
+            <h1>Item Added Into Cart</h1>
+        </div>
         <div class="header2">
             <div class="burger">
                 <div class="line line1"></div>
@@ -80,7 +83,8 @@
             </div>
             <div class="nav-btns2">
                 <a href=""
-                    ><i id="cart-phone" class="fas fa-shopping-cart"></i
+                    ><i id="cart-phone" class="fas fa-shopping-cart">
+                        <div class="shopping-sub"></div></i
                 ></a>
                 <a href=""
                     ><i id="account-user-phone" class="fas fa-user"></i
@@ -133,7 +137,9 @@
                     <input id="search-box" type="text" placeholder="Search" />
                 </div>
                 <div class="cart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart">
+                        <div class="shopping-sub"></div>
+                    </i>
                 </div>
                 <div class="account">
                     <i class="fas fa-user"></i>
@@ -326,8 +332,8 @@
 
             <div class="sub-main">
                 <div class="product-info">
-                    <h3>Flexible Shoe</h3>
-                    <p>Wool, Silk</p>
+                    <h3 id="product-info-title"></h3>
+                    <p id="product-info-composition"></p>
                     <p>Made in Turkey</p>
                     <span class="price">$1000</span>
                 </div>

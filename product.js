@@ -283,7 +283,28 @@ manShoesProducts.forEach((element) => {
     allManProducts.push(element);
 });
 
-allManProducts.sort(() => Math.random() - 0.5);
+// shuffling allManProducts array
+function shuffleAllManProducts() {
+    let shuffledAllManProducts = [];
+    let randomNumbers = [];
+    for (let i = 0; i < allManProducts.length; i++) {
+        randomNumbers.push(Math.random());
+    }
+    let combinedArray = [];
+    for (let i = 0; i < allManProducts.length; i++) {
+        let newObjectApparently = {};
+        newObjectApparently.product = allManProducts[i];
+        newObjectApparently.randomNumber = randomNumbers[i];
+        combinedArray.push(newObjectApparently);
+    }
+    combinedArray.sort((a, b) => {
+        return a.randomNumber - b.randomNumber;
+    });
+    for (let i = 0; i < allManProducts.length; i++) {
+        shuffledAllManProducts.push(combinedArray[i].product);
+    }
+    allManProducts = shuffledAllManProducts;
+}
 
 function loadRecommendations() {
     for (let i = 0; i < 4; i++) {
@@ -297,7 +318,7 @@ function loadRecommendations() {
         );
 
         const img = document.createElement("img");
-        img.setAttribute("src", `${allManProducts[i].inSrc}`);
+        img.setAttribute("src", `${allManProducts[i].outSrc}`);
         img.setAttribute("alt", `${allManProducts[i].title}`);
 
         const h4 = document.createElement("h4");
@@ -306,7 +327,7 @@ function loadRecommendations() {
 
         const pComp = document.createElement("p");
         pComp.classList.add("r-title");
-        pComp.innerHTML = `${allManProducts[i].composition}`;
+        pComp.innerHTML = `${allManProducts[i].composition.join(", ")}`;
 
         const pPrice = document.createElement("p");
         pPrice.classList.add("r-title");
@@ -324,7 +345,28 @@ function loadRecommendations() {
 
 let allWomanProducts = [];
 
-allWomanProducts.sort(() => Math.random() - 0.5);
+// shuffling allWomanProducts array
+function shuffleAllWomanProducts() {
+    let shuffledAllWomanProducts = [];
+    let randomNumbers = [];
+    for (let i = 0; i < allWomanProducts.length; i++) {
+        randomNumbers.push(Math.random());
+    }
+    let combinedArray = [];
+    for (let i = 0; i < allWomanProducts.length; i++) {
+        let newObjectApparently = {};
+        newObjectApparently.product = allManProducts[i];
+        newObjectApparently.randomNumber = randomNumbers[i];
+        combinedArray.push(newObjectApparently);
+    }
+    combinedArray.sort((a, b) => {
+        return a.randomNumber - b.randomNumber;
+    });
+    for (let i = 0; i < allWomanProducts.length; i++) {
+        shuffledAllWomanProducts.push(combinedArray[i].product);
+    }
+    allWomanProducts = shuffledAllWomanProducts;
+}
 
 function loadRecommendationsWoman() {
     for (let i = 0; i < 4; i++) {
@@ -377,14 +419,13 @@ const productInfoComposition = document.getElementById(
 );
 const productInfoPrice = document.querySelector(".price");
 
-console.log(productType);
-console.log(productName);
-
 // check for gender
 
 if (gender === "man") {
+    shuffleAllManProducts();
     loadRecommendations();
 } else {
+    shuffleAllWomanProducts();
     loadRecommendationsWoman();
 }
 
@@ -398,7 +439,7 @@ function loadInitialProductInfo() {
             productInfoTitle.innerHTML = `${element.title}`;
             let loadedComposition = element.composition.join(", ");
             productInfoComposition.innerHTML = `${loadedComposition}`;
-            productInfoPrice.innerHTML = `$${element.price}`
+            productInfoPrice.innerHTML = `$${element.price}`;
         }
     });
 }
