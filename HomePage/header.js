@@ -194,7 +194,7 @@ function updateCartSub() {
     // stored cart items in local storage
     let existingCartItems = JSON.parse(localStorage.getItem("cartItems"));
 
-    if (existingCartItems) {
+    if (existingCartItems !== null && existingCartItems.length > 0) {
         // array to store all item counts
         let itemCountArray = [];
 
@@ -251,12 +251,21 @@ function addToCart() {
         document.querySelector(".breadcrump").children[0].children[1].innerText;
 
     let productDataBase = `${productGender}${productType}Products`;
+    let imageSource;
+
+    window[productDataBase].forEach((element) => {
+        if (element.title === productTitle) {
+            imageSource = element.inSrc;
+        }
+    });
 
     let productCartInfo = {
         productTitle: productTitle,
         productColor: productColor,
         productSize: productSize,
         productPrice: productPrice,
+        imageSource: imageSource,
+        gender: productGender,
         itemCount: 1,
     };
 
@@ -273,23 +282,25 @@ function addToCart() {
         // variable for checking if same item is added or not
         let identicalItemFound = false;
 
-        // iterate through all stored keys
-        returnedCartItems.forEach((element) => {
-            if (
-                element.productTitle === productTitle &&
-                element.productColor === productColor &&
-                element.productSize === productSize
-            ) {
-                // increase item count
-                element.itemCount++;
-                // save it in local storage
-                localStorage.setItem(
-                    "cartItems",
-                    JSON.stringify(returnedCartItems)
-                );
-                return (identicalItemFound = true);
-            }
-        });
+        if (returnedCartItems.length !== 0) {
+            // iterate through all stored keys
+            returnedCartItems.forEach((element) => {
+                if (
+                    element.productTitle === productTitle &&
+                    element.productColor === productColor &&
+                    element.productSize === productSize
+                ) {
+                    // increase item count
+                    element.itemCount++;
+                    // save it in local storage
+                    localStorage.setItem(
+                        "cartItems",
+                        JSON.stringify(returnedCartItems)
+                    );
+                    return (identicalItemFound = true);
+                }
+            });
+        }
 
         // if no identical item was found, add new item fully
         if (identicalItemFound === false) {

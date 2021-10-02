@@ -2,6 +2,7 @@ main {
     background-color: rgb(212, 212, 212);
     min-width: 280px;
     padding: 1rem 0;
+    z-index: 1;
 }
 
 .empty-bitch {
@@ -65,7 +66,7 @@ main {
     background-color: white;
     width: 90%;
     margin: 1rem auto 0 auto;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 0.1rem 1rem;
 }
 
 .pic-info {
@@ -97,6 +98,10 @@ main {
     font-size: 1rem;
 }
 
+.product-info p {
+    margin-top: 0rem;
+}
+
 .quantity-cont {
     transform: translateY(-15%);
 }
@@ -111,11 +116,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0.5rem 0;
 }
 
 .quantity i {
     cursor: pointer;
     font-size: 0.7rem;
+    
 }
 
 .quantity p {
@@ -133,7 +140,10 @@ main {
     text-align: center;
     text-decoration: underline;
     cursor: pointer;
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    display: block;
+    width: 5rem;
 }
 
 .item-division {
@@ -242,5 +252,103 @@ main {
         font-size: 0.5rem;
     }
 
+    .checkout {
+        height: 2.5rem;
+        font-size: 0.7rem;
+    }
+
+    .paypal {
+        height: 2.5rem;
+        font-size: 0.7rem;
+    }
     
+    .quantity {
+        margin: 0 0;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .product-info p {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .for-media-wrapper {
+        display: flex;
+    }
+
+    .items-cont {
+        width: 47%;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .order-cont {
+        width: 47%;
+        max-height: 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        margin-right: 1rem;
+        z-index: 1;
+    }
+
+    .order-wrapper {
+        width: 100%;
+    }
+
+    .product-info p {
+        margin-top: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-info p {
+        margin-top: 1.5rem;
+    }
+
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-info p {
+        font-size: 1rem;
+    }
+
+    .remove-cont p {
+        font-size: 1rem;
+    }
+
+    .order-cont h3 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .text span {
+        font-size: 0.8rem;
+    }
+
+    .amount p {
+        font-size: 1rem;
+    }
+
+    .amount span {
+        font-size: 0.8rem;
+    }
+
+    .quantity p {
+        font-size: 1rem;
+    }
+}
+
+.no-products {
+    background-color: white;
+    margin: 1rem auto 0 auto;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
 }
