@@ -193,6 +193,7 @@ nav li:hover {
 .search-window {
     width: 100%;
     height: 50vh;
+    min-height: 20rem;
     position: fixed;
     z-index: 21;
     background-color: white;
@@ -200,6 +201,9 @@ nav li:hover {
     overflow: hidden;
     transition: transform 0.4s ease-in;
     border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Cart Window Animate */
@@ -369,4 +373,39 @@ nav li:hover {
     display: none;
     justify-content: center;
     align-items: center;
+}
+
+.search-window {
+
+}
+
+.search-window-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    height: calc(90% - 4rem);
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    overflow: scroll;
+}
+
+.search-item {
+    width: 12%;
+    margin: 1% 6.5%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+}
+
+.search-item img {
+    width: 100%;
+    height: auto;
+}
+
+.search-item p {
+    text-align: center;
+    margin-top: 0.5rem;
 }

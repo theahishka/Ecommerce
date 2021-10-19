@@ -101,3 +101,7 @@ window.manShoesProducts = [
     },
 ];
 
+window.fullManProducts = window.manKnitwearProducts.concat(manCoatsProducts, manShirtsProducts, manAccessoriesProducts, manShoesProducts);
+
+console.log(window.fullManProducts);
+

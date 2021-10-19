@@ -352,3 +352,8 @@ main {
     padding: 1rem;
     text-align: center;
 }
+
+.search-for-products {
+    text-align: center;
+    margin: 0 auto;
+}

@@ -282,6 +282,8 @@ function createPlusEventListener() {
                     updateCartSub();
                     deleteOrderTotal();
                     createOrderTotal();
+                    
+                    
                     deleteItems();
                     let updatedItemsCount = JSON.parse(
                         localStorage.getItem("cartItems")
@@ -355,6 +357,7 @@ function createMinusEventListener() {
                         updateCartSub();
                         deleteOrderTotal();
                         createOrderTotal();
+                        
                         deleteItems();
                         let updatedItemsCount = JSON.parse(
                             localStorage.getItem("cartItems")

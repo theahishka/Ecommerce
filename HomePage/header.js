@@ -346,3 +346,115 @@ addToCartButton.addEventListener("click", function (e) {
         updateCartSub();
     }
 });
+
+// search logic
+
+searchBox.addEventListener("keyup", searchForProducts);
+
+function searchForProducts(event) {
+    const searchBoxValue = document
+        .getElementById("search-box")
+        .value.toLowerCase();
+    if (event.key === "Backspace" && searchBoxValue === "") {
+        return;
+    }
+
+    let foundMatch = false;
+
+    const initialH3IsThere = document.getElementById("initial");
+
+    if (initialH3IsThere) {
+        initialH3IsThere.remove();
+    }
+
+    const searchWindowWrapperThere =
+        document.getElementById("a-window-wrapper");
+
+    if (searchWindowWrapperThere) {
+    } else {
+        createWindowWrapper();
+    }
+
+    const noProducts = document.getElementById("no-products");
+
+    if (noProducts) {
+        noProducts.remove();
+    } else {
+        
+    }
+    
+    deleteSearchItems();
+
+    for (let i = 0; i < window.fullManProducts.length; i++) {
+        let loweredCaseTitles = window.fullManProducts[i].title.toLowerCase();
+        if (loweredCaseTitles.match(searchBoxValue)) {
+            foundMatch = true;
+            createSearchItem(window.fullManProducts[i]);
+        }
+    }
+    if (foundMatch === false) {
+        const searchWindowWrapper = document.querySelector(".search-window-wrapper");
+        searchWindowWrapper.remove();
+        noProductsFoundTitle();
+    }
+}
+
+function noProductsFoundTitle() {
+    const searchWindow = document.querySelector(".search-window");
+
+    const h3 = document.createElement("h3");
+    h3.innerText = "No Item Found";
+    h3.classList.add(".no-products-found");
+    h3.id = "no-products";
+
+    searchWindow.appendChild(h3);
+}
+
+function createSearchTitle() {
+
+}
+
+function deleteSearchItems() {
+    const searchItems = document.querySelectorAll(".search-item");
+    searchItems.forEach((element) => {
+        element.remove();
+    });
+}
+
+function createWindowWrapper() {
+    const searchWindow = document.querySelector(".search-window");
+
+    const searchWindowWrapper = document.createElement("div");
+    searchWindowWrapper.classList.add("search-window-wrapper");
+    searchWindowWrapper.id = "a-window-wrapper";
+
+    searchWindow.appendChild(searchWindowWrapper);
+}
+
+function createSearchItem(item) {
+    const searchWindowWrapper = document.querySelector(
+        ".search-window-wrapper"
+    );
+
+    const searchItemDiv = document.createElement("div");
+    searchItemDiv.classList.add("search-item");
+
+    const searchItemImg = document.createElement("img");
+    searchItemImg.setAttribute("src", `${item.inSrc}`);
+
+    const searchItemP = document.createElement("p");
+    searchItemP.innerText = `${item.title}`;
+
+    searchWindowWrapper.appendChild(searchItemDiv);
+    searchItemDiv.appendChild(searchItemImg);
+    searchItemDiv.appendChild(searchItemP);
+}
+
+const searchWindowInitial = document.querySelector(".search-window");
+
+const initialH3 = document.createElement("h3");
+initialH3.classList.add("search-for-something");
+initialH3.id = "initial"
+initialH3.innerText = "Search For Items";
+
+searchWindowInitial.appendChild(initialH3);
